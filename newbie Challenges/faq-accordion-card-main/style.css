@@ -1,0 +1,92 @@
+:root {
+  --family: Kumbh Sans, Serif;
+  --font-weight: 400px;
+  --text-dark-primary: hsl(238, 29%, 16%);
+  --text-light-primary: hsl(14, 88%, 65%);
+  --text-dark-neutral: hsl(237, 12%, 33%);
+  --text-light-neutral: hsl(240, 6%, 50%);
+  --divider-colours: hsl(240, 5%, 91%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--family);
+  background: linear-gradient(
+    to bottom right,
+    hsl(238, 29%, 16%),
+    hsl(14, 88%, 65%),
+    hsl(238, 29%, 16%),
+    hsl(14, 88%, 65%)
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  min-height: 100vh;
+}
+img {
+  width: 100%;
+  display: block;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+h2 {
+  margin-bottom: 7px;
+  cursor: pointer;
+}
+main {
+  background: #fff;
+  max-width: 375px;
+  width: 100%;
+  padding: 2rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+}
+.question {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+.question:not(:last-child) {
+  border-bottom: 1px solid var(--divider-colours);
+  margin-bottom: 1.5rem;
+}
+.FAQ:hover {
+  color: var(--text-light-primary);
+}
+/* .question:hover .show {
+  color: #000;
+} */
+.FAQ.show {
+  font-size: 2rem;
+  font-weight: bold;
+  color: black;
+}
+
+.answers {
+  display: none;
+}
+.answers.show {
+  display: block;
+}
+
+button {
+  border: none;
+  width: 2rem;
+  background: transparent;
+  cursor: pointer;
+  text-align: right;
+  margin-left: auto;
+}
+.arrow {
+  width: 1rem;
+}
