@@ -21,8 +21,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: https://github.com/SatellitePeace/FrontEnd-Mentor-JS-Challenges/tree/main/newbie%20Challenges/interactive-rating-component-main
-- Live Site URL: https://interactive-rating-frontend-card.netlify.app/
+- Solution URL: "https://github.com/SatellitePeace/FrontEnd-Mentor-JS-Challenges/tree/main/newbie%20Challenges/interactive-rating-component-main"
+- Live Site URL: "https://interactive-rating-frontend-card.netlify.app/"
 
 ## My process
 
@@ -60,7 +60,7 @@ In future project i will like to add a reload button to enable the user to go ba
 
 ### Useful resources
 
-- [Example resource 1](https://stackoverflow.com/questions/32842967/get-value-of-the-clicked-button) - This juggled my memory on how to get the value of a clicked button.
+- [Stackoverflow](https://stackoverflow.com/questions/32842967/get-value-of-the-clicked-button) - This juggled my memory on how to get the value of a clicked button.
 
 ## Author
 
