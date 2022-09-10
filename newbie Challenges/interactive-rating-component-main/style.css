@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,400;1,600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: hsl(216, 12%, 8%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  font-family: Overpass, sans-serif;
+  max-width: 350px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 1rem;
+  background: hsl(213, 19%, 18%);
+  color: hsl(217, 12%, 63%);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+}
+h1 {
+  color: hsl(0, 0%, 100%);
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+.ratings__img {
+  background: hsl(216, 12%, 8%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+}
+.rating__text {
+  font-size: 15px;
+}
+.ratings {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+  width: 100%;
+}
+span {
+  font-family: Overpass, sans-serif;
+  background: hsl(216, 12%, 8%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+span:hover {
+  background-color: hsl(216, 12%, 54%);
+  color: hsl(0, 0%, 100%);
+}
+span:active {
+  background-color: hsl(25, 97%, 53%);
+}
+.rating__btn {
+  font-family: Overpass, sans-serif;
+  background: hsl(25, 97%, 53%);
+  color: hsl(0, 0%, 100%);
+  border: none;
+  height: 2.5rem;
+  width: 100%;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.rating__btn:hover {
+  color: hsl(25, 97%, 53%);
+  background: hsl(0, 0%, 100%);
+}
+/* ATTRIBUTION */
+.attribution {
+  font-size: 14px;
+  text-align: center;
+  color: hsl(0, 0%, 100%);
+  margin-top: 1rem;
+}
+
+.attribution a {
+  color: hsl(25, 97%, 53%);
+}
+
+/* THANK YOU UNIQUE STYLE */
+h5 {
+  background: hsl(216, 12%, 8%);
+  color: hsl(25, 97%, 53%);
+  font-weight: 400;
+  padding: 7px 0;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 2rem;
+  border-radius: 2rem;
+}
+.thankYou__section {
+  text-align: center;
+}
+.thankYou--img {
+  display: block;
+  margin: 0 auto;
+}
