@@ -48,9 +48,11 @@ h1 {
   margin: 2rem 0;
   width: 100%;
 }
-span {
+
+button {
   font-family: Overpass, sans-serif;
   background: hsl(216, 12%, 8%);
+  color: hsl(217, 12%, 63%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -58,15 +60,18 @@ span {
   width: 2.2rem;
   height: 2.2rem;
   border-radius: 50%;
+  border: none;
   cursor: pointer;
   transition: all 0.3s;
 }
-span:hover {
+button:hover {
   background-color: hsl(216, 12%, 54%);
   color: hsl(0, 0%, 100%);
 }
-span:active {
+
+.rate.clicked {
   background-color: hsl(25, 97%, 53%);
+  color: hsl(0, 0%, 100%);
 }
 .rating__btn {
   font-family: Overpass, sans-serif;
