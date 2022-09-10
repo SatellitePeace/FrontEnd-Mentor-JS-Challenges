@@ -21,6 +21,7 @@ question.forEach((item, index) => {
   });
 });
 
+// function for hiding contents and implementing the click item to close another item function
 function hideAllContents() {
   answers.forEach((content) => content.classList.remove("show"));
   faq.forEach((content) => content.classList.remove("show"));
