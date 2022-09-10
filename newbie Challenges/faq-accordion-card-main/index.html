@@ -9,34 +9,23 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
     <link rel="stylesheet" href="./style.css">
     <title>Frontend Mentor | FAQ Accordion Card</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <!-- <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style> -->
   </head>
 
   <body>
 
     <main>
-      <section>
-        <img src="./images/illustration-woman-online-mobile.svg" alt="">
+      <!-- IMG -->
+      <section class="image__section">
+        <img src="./images/illustration-woman-online-mobile.svg" alt="woman reading email" class="mobile__image">
       </section>
       <!-- FAQ -->
-      <section>
+      <section class="question__section">
         <h1>FAQ</h1>
         <article class="question">
           <aside class="question__text">
-            <p class="FAQ">what is your name?</p>
-            <p class="answers">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque praesentium ad
-              temporibus!
+            <p class="FAQ">How many team members can I invite?</p>
+            <p class="answers">You can invite up to 2 additional users on the Free plan. There is no limit on team
+              members for the Premium plan.
             </p>
           </aside>
           <button class="button">
@@ -46,9 +35,8 @@
         <!-- question two -->
         <article class="question">
           <aside class="question__text">
-            <p class="FAQ">where do you school?</p>
-            <p class="answers">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque praesentium ad
-              temporibus!
+            <p class="FAQ">What is the maximum file upload size?</p>
+            <p class="answers">No more than 2GB. All files in your account must fit your allotted storage space
             </p>
           </aside>
           <button class="button">
@@ -58,9 +46,32 @@
         <!-- question three -->
         <article class="question">
           <aside class="question__text">
-            <p class="FAQ">Do you love web dev?</p>
-            <p class="answers">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque praesentium ad
-              temporibus!
+            <p class="FAQ">How do I reset my password?</p>
+            <p class="answers">Click “Forgot password” from the login page or “Change password” from your profile page.
+              A reset link will be emailed to
+              you.
+            </p>
+          </aside>
+          <button class="button">
+            <img src="/images/icon-arrow-down.svg" alt="toggle question arrow" class="arrow">
+          </button>
+        </article>
+        <!-- question four -->
+        <article class="question">
+          <aside class="question__text">
+            <p class="FAQ">I cancel my subscription?</p>
+            <p class="answers">Yes! Send us a message and we’ll process your request no questions asked.
+            </p>
+          </aside>
+          <button class="button">
+            <img src="/images/icon-arrow-down.svg" alt="toggle question arrow" class="arrow">
+          </button>
+        </article>
+        <!-- question four -->
+        <article class="question">
+          <aside class="question__text">
+            <p class="FAQ">I cancel my subscription?</p>
+            <p class="answers">Yes! Send us a message and we’ll process your request no questions asked.
             </p>
           </aside>
           <button class="button">
@@ -69,10 +80,11 @@
         </article>
       </section>
     </main>
-    <!-- <div class="attribution">
+    <!-- ATTRIBUTION -->
+    <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="#">Your Name Here</a>.
-    </div> -->
+      Coded by <a href="#">Satellite Peace</a>.
+    </div>
     <script src="/app.js"></script>
   </body>
 

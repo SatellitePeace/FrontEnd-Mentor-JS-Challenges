@@ -33,14 +33,3 @@ Background gradient:
 #### Dividers
 
 - Light grayish blue: hsl(240, 5%, 91%)
-
-## Typography
-
-### Body Copy
-
-- Font size: 12px
-
-### Font
-
-- Family: [Kumbh Sans](https://fonts.google.com/specimen/Kumbh+Sans)
-- Weights: 400, 700
