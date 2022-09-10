@@ -25,11 +25,11 @@ question.forEach((item, index) => {
 ### Links
 
 - Solution URL: https://github.com/SatellitePeace/FrontEnd-Mentor-JS-Challenges/tree/main/newbie%20Challenges/faq-accordion-card-main
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: https://faq-accordion-frontend-mentor-card.netlify.app/
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor Nneoma Peace (@SatellitePeace)
 
 ## Acknowledgments
 
