@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font awesome cdn -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- end of font awesome cdn -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="/style.css">
+    <title>Frontend Mentor | Article preview component</title>
+
+  </head>
+
+  <body>
+    <main class="card">
+      <!-- img section -->
+      <picture class="picture">
+        <img src="/images/drawers.jpg" alt="a flower on top of a wooden drawer" class="preview__image">
+      </picture>
+      <!-- text section -->
+      <section class="details">
+        <h1 class="details__header">
+          Shift the overall look and feel by adding these wonderful
+          touches to furniture in your home
+
+        </h1>
+        <p class="details__info">
+          Ever been in a room and felt like something was missing? Perhaps
+          it felt slightly bare and uninviting. I’ve got some simple tips
+          to help you make any room feel complete.
+        </p>
+        <article class="card__footer" id="card__footer--one">
+          <aside class="card__footer--user">
+            <picture class="card__footer--picture">
+              <img src="/images/avatar-michelle.jpg" alt="avater photo of michelle Appleton" class="card__footer--img">
+            </picture>
+            <div class="card__footer--details">
+              <h4>Michelle Appleton</h4>
+              <small>28 Jun 2020</small>
+            </div>
+          </aside>
+          <button class="icon" id="btn">
+            <i class="fa fa-share-alt" aria-hidden="true"></i>
+          </button>
+          <!-- toggle active state -->
+          <div class="toggle__active--state">
+            <button class="icon btnTwo" id="bigscreen__btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </button>
+            <aside class="card__active--bigscreen">
+              <h5>Share</h5>
+              <div class="card__footer--bigscreen">
+                <button class="icon__socials">
+                  <i class="fa-brands fa-square-facebook"></i>
+                </button>
+                <button class="icon__socials">
+                  <i class="fa-brands fa-square-twitter"></i>
+                </button>
+                <button class="icon__socials">
+                  <i class="fa-brands fa-square-pinterest"></i>
+                </button>
+              </div>
+            </aside>
+          </div>
+        </article>
+        <!-- SECOND STATE TO BE SHOWN WHEN SHARE BUTTON IS TOGGLED -->
+        <article class="card__active card__footer--active" id="card__footer--two">
+          <aside class="card__footer--info">
+            <p>Share</p>
+            <div class="card__footer--user"></div>
+            <button class="icon__socials">
+              <i class="fa-brands fa-square-facebook"></i>
+            </button>
+            <button class="icon__socials">
+              <i class="fa-brands fa-square-twitter"></i>
+            </button>
+            <button class="icon__socials">
+              <i class="fa-brands fa-square-pinterest"></i>
+            </button>
+            </div>
+          </aside>
+          <button class="icon share__state--btn " id="btnTwo">
+            <i class="fa fa-share-alt" aria-hidden="true"></i>
+          </button>
+        </article>
+      </section>
+    </main>
+    <footer class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Nneoma Peace (@SatellitePeace)</a>.
+    </footer>
+
+    <script src="/app.js"></script>
+  </body>
+
+</html>
