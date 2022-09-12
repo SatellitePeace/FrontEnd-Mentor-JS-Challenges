@@ -1,0 +1,208 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem;
+  min-height: 100vh;
+  background: aqua;
+}
+img {
+  width: 100%;
+  display: block;
+}
+h1 {
+  font-size: 12px;
+  font-weight: bold;
+}
+h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: hsl(0, 6%, 24%);
+  margin-top: 2rem;
+}
+
+.main {
+  max-width: 300px;
+  width: 100%;
+  background: hsl(0, 100%, 98%);
+  background: #fff5f5;
+  border: none;
+}
+
+.mycard__title span {
+  font-size: 2rem;
+  background: -webkit-linear-gradient(
+    top left,
+    hsl(0, 80%, 86%),
+    hsl(0, 74%, 74%)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.card__subtitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 4rem;
+}
+.card__subtitle--two {
+  display: none;
+}
+.card__subtitle--circle {
+  display: inline-block;
+  height: 1.3rem;
+  width: 1.3rem;
+  margin-left: 1.5rem;
+  margin-top: -7px;
+  border: 2px solid #000;
+  border-radius: 50%;
+}
+.mycard__text {
+  font-size: 14px;
+  color: hsl(0, 36%, 70%);
+}
+.form {
+  position: relative;
+  margin: 4rem 0 7rem 0;
+}
+.form__input {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: transparent;
+  height: 2.5rem;
+  width: calc(100% - 10%);
+  border: none;
+  border: 1px solid hsl(0, 74%, 74%);
+
+  border-radius: 2rem;
+}
+.form__input:focus {
+  outline: none;
+  padding: 1rem;
+}
+.form__input::placeholder {
+  padding: 1rem;
+  font-size: 12px;
+  color: hsl(0, 74%, 74%);
+}
+.input__submit {
+  background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 2rem;
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+  height: 2.5rem;
+  width: 20%;
+  font-size: 2rem;
+  color: #fff;
+  box-shadow: 5px 5px 5px 2px hsl(0, 36%, 70%);
+}
+.input__submit:hover {
+  background: hsl(0, 80%, 86%);
+}
+.form__alert {
+  position: absolute;
+  top: -2rem;
+  display: none;
+}
+/* ATTRIBUTION */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    margin: 0;
+    overflow-y: hidden;
+  }
+  .card {
+    max-width: 700px;
+    display: flex;
+    flex-direction: row;
+    text-align: start;
+    background: hsl(0, 100%, 98%);
+    border: none;
+  }
+
+  .card__photo {
+    max-width: 50%;
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .card__subtitle--circle {
+    display: inline-block;
+    height: 1.3rem;
+    width: 1.3rem;
+    margin-left: -4rem;
+    margin-top: -7px;
+    border: 2px solid #000;
+    border-radius: 50%;
+  }
+  .mycard__body {
+    background: linear-gradient(
+      135deg,
+      hsl(0, 80%, 86%),
+      #fff5f5,
+      hsl(0, 80%, 86%)
+    );
+  }
+  .mycard__title span {
+    font-size: 2rem;
+    background: -webkit-linear-gradient(top left, #f8bfbf, #ee8c8c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .card__subtitle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 4rem;
+  }
+  .card__subtitle--circle {
+    display: inline-block;
+    height: 1.3rem;
+    width: 1.3rem;
+    margin-left: 1.5rem;
+    margin-top: -7px;
+    border: 2px solid #000;
+    border-radius: 50%;
+  }
+  .mycard__text {
+    font-size: 14px;
+    color: hsl(0, 36%, 70%);
+  }
+  .form__input {
+    position: absolute;
+    bottom: 0;
+    left: 1rem;
+    background: transparent;
+    height: 2.5rem;
+    width: calc(100% - 30%);
+    border: none;
+    border: 1px solid hsl(0, 74%, 74%);
+    border-radius: 2rem;
+  }
+  .input__submit {
+    bottom: 0;
+    right: 50px;
+  }
+}
