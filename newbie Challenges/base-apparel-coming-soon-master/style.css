@@ -1,3 +1,5 @@
+/* font family from google */
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;1,500&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +12,7 @@ body {
   align-items: center;
   margin: 3rem;
   min-height: 100vh;
-  background: aqua;
+  background: #f5fff5;
 }
 img {
   width: 100%;
@@ -25,6 +27,7 @@ h2 {
   text-transform: uppercase;
   color: hsl(0, 6%, 24%);
   margin-top: 2rem;
+  letter-spacing: 12px;
 }
 
 .main {
@@ -33,12 +36,16 @@ h2 {
   background: hsl(0, 100%, 98%);
   background: #fff5f5;
   border: none;
+  font-family: Josefin Sans;
+  box-shadow: 3px 3px 6px rgba(255, 192, 203);
 }
 
 .mycard__title span {
   font-size: 2rem;
   background: -webkit-linear-gradient(
     top left,
+    hsl(0, 80%, 86%),
+    hsl(0, 74%, 74%),
     hsl(0, 80%, 86%),
     hsl(0, 74%, 74%)
   );
@@ -60,7 +67,7 @@ h2 {
   width: 1.3rem;
   margin-left: 1.5rem;
   margin-top: -7px;
-  border: 2px solid #000;
+  border: 2px solid hsl(0, 74%, 74%);
   border-radius: 50%;
 }
 .mycard__text {
@@ -79,8 +86,9 @@ h2 {
   height: 2.5rem;
   width: calc(100% - 10%);
   border: none;
+  padding-left: 1rem;
   border: 1px solid hsl(0, 74%, 74%);
-
+  font-family: Josefin Sans;
   border-radius: 2rem;
 }
 .form__input:focus {
@@ -91,6 +99,16 @@ h2 {
   padding: 1rem;
   font-size: 12px;
   color: hsl(0, 74%, 74%);
+  font-family: inherit;
+}
+.form__input.error {
+  border: 1px solid red;
+}
+.form__input.warning {
+  border: 1px solid yellow;
+}
+.form__input.success {
+  border: 1px solid lightblue;
 }
 .input__submit {
   background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
@@ -114,12 +132,13 @@ h2 {
 .form__alert {
   position: absolute;
   top: -2rem;
-  display: none;
 }
+
 /* ATTRIBUTION */
 .attribution {
-  font-size: 11px;
   text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
 }
 
 .attribution a {
@@ -142,21 +161,13 @@ h2 {
 
   .card__photo {
     max-width: 50%;
+
     width: 100%;
     display: block;
     object-fit: cover;
-    object-position: center;
+    object-position: left center;
   }
 
-  .card__subtitle--circle {
-    display: inline-block;
-    height: 1.3rem;
-    width: 1.3rem;
-    margin-left: -4rem;
-    margin-top: -7px;
-    border: 2px solid #000;
-    border-radius: 50%;
-  }
   .mycard__body {
     background: linear-gradient(
       135deg,
@@ -177,14 +188,8 @@ h2 {
     gap: 8px;
     height: 4rem;
   }
-  .card__subtitle--circle {
-    display: inline-block;
-    height: 1.3rem;
-    width: 1.3rem;
-    margin-left: 1.5rem;
-    margin-top: -7px;
-    border: 2px solid #000;
-    border-radius: 50%;
+  .card__subtitle--one {
+    display: none;
   }
   .mycard__text {
     font-size: 14px;
