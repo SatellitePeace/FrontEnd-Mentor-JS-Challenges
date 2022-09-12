@@ -3,26 +3,6 @@ const formInput = document.querySelector(".form__input");
 const formSubmit = document.querySelector(".input__submit");
 const formAlert = document.querySelector(".form__alert");
 
-// function validate() {
-//   form.addEventListener("submit", function (e) {
-//     const inputValue = document.contactForm.email.value;
-//     // Validate email address
-//     if (inputValue == "") {
-//       printErr("emailErr", "plsease enter your email");
-//     } else {
-//       const regex = /^\S+@\S+\.\S+$/;
-//       if (regex.test(inputValue) === false) {
-//         printErr("emailErr", "not good enter your email");
-//       } else {
-//         printErr("emailErr", "");
-//         emailErr = false;
-//       }
-//     }
-//     e.preventDefault();
-//   });
-//   e.preventDefault(); // Defining error variables with a default value
-// }
-
 form.addEventListener("submit", function (e) {
   // get form input value
   const inputValue = formInput.value;
