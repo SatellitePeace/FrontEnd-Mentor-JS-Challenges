@@ -1,0 +1,188 @@
+/* reset css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --Red: hsl(0, 100%, 74%);
+  --Green: hsl(154, 59%, 51%);
+  --Blue: hsl(248, 32%, 49%);
+  --Dark-Blue: hsl(249, 10%, 26%);
+  --Grayish-Blue: hsl(246, 25%, 77%);
+  --white: #fff;
+  --box-shadow: 1px 7px rgba(0, 0, 0, 0.2), 0px 0px rgba(0, 0, 0, 0.2),
+    1px 1px rgba(0, 0, 0, 0.2);
+}
+
+body {
+  background-image: url("/images/bg-intro-mobile.png");
+  background-color: var(--Red);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  margin: 3rem;
+  font-family: sans-serif;
+  line-height: 1.5rem;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 375px;
+  width: 100%;
+}
+.text__section {
+  color: var(--white);
+  text-align: center;
+  font-size: 16px;
+}
+.text__section h1 {
+  margin: 1rem;
+  text-align: center;
+}
+.form__section {
+  margin-top: 1.5rem;
+}
+.form__section article {
+  background-color: var(--Blue);
+  margin: 1.5rem 0;
+  height: 4rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  box-shadow: var(--box-shadow);
+}
+.form__section .heading__four span {
+  font-weight: 100;
+}
+
+.form {
+  background: var(--white);
+  text-align: center;
+  margin: 0 auto;
+  padding: 2rem 0.6rem;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+}
+input {
+  border: 1px solid var(--Dark-Blue);
+  padding: 1rem;
+}
+input::placeholder {
+  counter-reset: var(--Grayish-Blue);
+}
+input:focus {
+  outline: none;
+}
+input[value^="email@example.com"] {
+  color: var(--Red);
+}
+input.show {
+  border: 1px solid var(--Red);
+}
+input,
+button {
+  height: 2.7rem;
+  max-width: 250px;
+  width: 100%;
+  border-radius: 5px;
+  margin: 0 auto;
+  display: block;
+  cursor: pointer;
+}
+button {
+  border: none;
+  background-color: var(--Green);
+  color: var(--white);
+  text-transform: uppercase;
+  box-shadow: 3px 3px lightgreen, 2px 1px lightgreen, 1px 1px lightgreen;
+  transition: 0.3s;
+}
+button:hover {
+  background-color: lightgreen;
+  box-shadow: 3px 3px hsl(154, 59%, 51%), 2px 1px hsl(154, 59%, 51%),
+    1px 1px hsl(154, 59%, 51%);
+}
+.firstname,
+.lastname,
+.email,
+.password {
+  position: relative;
+  margin-bottom: 1.3rem;
+}
+.error__icon {
+  position: absolute;
+  top: 25%;
+  right: 4rem;
+  color: var(--Red);
+  display: none;
+}
+.alert {
+  display: block;
+  text-align: right;
+  margin-right: 3.3rem;
+  color: var(--Red);
+  display: none;
+}
+.alert.show,
+.error__icon.show {
+  display: block;
+}
+.terms__conditions {
+  margin: 1.2rem 3rem 0 3rem;
+  color: var(--Grayish-Blue);
+  font-size: 14px;
+  line-height: 1.2rem;
+}
+.terms__conditions span {
+  text-transform: uppercase;
+  color: var(--Red);
+  cursor: pointer;
+  font-weight: bolder;
+}
+.attribution {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 1rem;
+}
+.attribution a {
+  color: var(--white);
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    background-image: url("/images/bg-intro-mobile.png");
+  }
+  main {
+    flex-direction: row;
+    justify-content: baseline;
+    align-items: center;
+    gap: 3rem;
+    max-width: 900px;
+  }
+  .text__section {
+    width: 100%;
+    text-align: inherit;
+  }
+  .text__section h1 {
+    font-size: 2rem;
+    line-height: 2rem;
+    text-align: initial;
+  }
+  .form__section {
+    max-width: 400px;
+    width: 100%;
+  }
+  .form {
+    max-width: 450px;
+    width: 100%;
+  }
+}
