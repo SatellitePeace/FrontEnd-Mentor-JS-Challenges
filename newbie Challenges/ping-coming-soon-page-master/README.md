@@ -19,8 +19,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: https://github.com/SatellitePeace/FrontEnd-Mentor-JS-Challenges/tree/main/newbie%20Challenges/ping-coming-soon-page-master
+- Live Site URL: https://front-end-ping-email-validation.netlify.app/
 
 ## My process
 
