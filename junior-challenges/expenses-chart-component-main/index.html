@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <!-- CHART.JS SCRIPT TAG -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/style.css">
+    <title>Frontend Mentor | Expenses chart component</title>
+
+  </head>
+
+  <body>
+    <!-- HEADING SECTION -->
+    <header class="heading__section">
+      <div class="head__one" aria-roledescription="money balance">
+        <small role="text">
+          My balance
+        </small>
+        <h1>$921.48</h1>
+      </div>
+      <figure class="logo">
+        <img src="/images/logo.svg" alt="">
+      </figure>
+    </header>
+    <!-- CHART SECTION -->
+    <main class="main">
+      <section class="card">
+        <h2>
+          Spending - Last 7 days
+        </h2>
+        <canvas id="myChart"></canvas>
+        <div class="underline" aria-roledescription="underline"></div>
+        <article class="amount__details">
+          <div class="amount__details--one">
+            <small class="amount__desc">Total this month
+            </small>
+            <h3>
+              $478.33
+            </h3>
+          </div>
+          <div class="amount__details--two">
+            <strong>
+              +2.4%
+            </strong>
+            <small class="amount__desc" role="contentinfo">My balance
+            </small>
+          </div>
+        </article>
+      </section>
+    </main>
+    <footer class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Nneoma Peace</a>.
+    </footer>
+    <script src="/app.js"></script>
+  </body>
+
+</html>

@@ -1,0 +1,114 @@
+/* RESET CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* ROOT COLOURS */
+:root {
+  /* ### Primary */
+  --Soft-red: hsl(10, 79%, 65%);
+  --Cyan: hsl(186, 34%, 60%);
+  /* ### Neutral */
+  --Darkbrown: hsl(25, 47%, 15%);
+  --Mediumbrown: hsl(28, 10%, 53%);
+  --Cream: hsl(27, 66%, 92%);
+}
+/* GENERAL STYLES */
+img {
+  display: block;
+  width: 100%;
+}
+small {
+  display: block;
+}
+body {
+  font-family: sans-serif;
+  background: var(--Cream);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 3rem;
+}
+/* HEADING SECTION STYLES */
+.heading__section {
+  background-color: var(--Soft-red);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 400px;
+  width: 100%;
+  height: 4rem;
+  margin: 0.2rem 2rem 2rem 2rem;
+  padding: 0 1.5rem;
+  border-radius: 1rem;
+  color: #fff;
+}
+h1 {
+  font-size: 1.3rem;
+  font-weight: 400;
+  padding-top: 5px;
+}
+.logo {
+  margin-left: auto;
+  width: 3.5rem;
+}
+/* MAIN SECTION STYLES */
+main {
+  max-width: 400px;
+  width: 100%;
+  background: #fff;
+  border-radius: 1rem;
+}
+.card {
+  padding: 2rem;
+  max-width: 400px;
+  width: 100%;
+}
+.card h2 {
+  font-size: 1.2rem;
+  padding-bottom: 3rem;
+}
+canvas {
+  cursor: pointer;
+}
+.underline {
+  width: 100%;
+  height: 2px;
+  margin: 1.5rem 0 1rem 0;
+  background: var(--Mediumbrown);
+}
+/* main section footer */
+.amount__details {
+  display: flex;
+  justify-content: space-between;
+}
+.amount__details--one h3 {
+  font-size: 1.7rem;
+}
+.amount__details--two {
+  font-size: 14px;
+  margin-top: 1.5rem;
+}
+.amount__details--two strong {
+  display: inline-block;
+  margin-bottom: 7px;
+}
+.amount__desc {
+  color: var(--Mediumbrown);
+  margin-bottom: 5px;
+}
+/* ATTRIBUTION */
+.attribution {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 1rem;
+  color: var(--Darkbrown);
+}
+
+.attribution a {
+  color: var(--Soft-red);
+}
