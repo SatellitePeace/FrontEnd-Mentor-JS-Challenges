@@ -1,0 +1,257 @@
+/* google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+/* reset css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  /* ### Primary */
+  --Linear-gradient: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+  --Red: hsl(0, 100%, 66%);
+  /* ### Neutral */
+  --White: hsl(0, 0%, 100%);
+  --Lightgrayishviolet: hsl(270, 3%, 87%);
+  --Darkgrayishviolet: hsl(279, 6%, 55%);
+  --Verydarkviolet: hsl(278, 68%, 11%);
+  /* font size */
+  --Fontsize: 18px;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+body {
+  font-family: Space Grotesk, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  margin: 5rem 0;
+  overflow-x: hidden;
+  background-image: url("/images/bg-main-mobile.png");
+  background-repeat: repeat-x;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 375px;
+  width: 100%;
+}
+/* img styles and positions */
+.img__section {
+  position: relative;
+  max-width: 375px;
+  width: 100%;
+  color: var(--White);
+  margin-right: auto;
+  height: 100%;
+  background-size: cover;
+}
+
+.img__one {
+  position: absolute;
+  top: -3rem;
+  left: 2rem;
+}
+.img__two {
+  position: absolute;
+  top: 4rem;
+  right: 2rem;
+}
+/* position img text and logo to cards */
+
+.figcaption__one {
+  display: block;
+  position: absolute;
+  right: 1rem;
+  top: 2.7rem;
+}
+
+.figcaption__two {
+  position: absolute;
+  top: 7rem;
+  width: 100%;
+}
+/*  purple card logo width adjustmensts */
+.logo {
+  width: 4rem;
+  margin-top: -2rem;
+}
+/* card details styles */
+.zeros {
+  font-size: 1.3rem;
+  margin-left: -2rem;
+  margin-top: 3rem;
+
+  width: 100%;
+  text-align: center;
+}
+.name__date {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 2rem;
+  margin-left: -4.5rem;
+  text-transform: uppercase;
+}
+/* form and input styles */
+form {
+  background-color: var(--White);
+  z-index: 100000;
+  max-width: 375px;
+  width: 100%;
+  margin-top: 18rem;
+}
+.form-group {
+  margin-bottom: 2rem;
+}
+.invalid-feedback {
+  font-size: 0.8rem;
+}
+input {
+  border-radius: 7px;
+}
+input::placeholder {
+  color: var(--Darkgrayishviolet) !important;
+}
+input.input__valid {
+  border: 1px solid transparent;
+  border-radius: 7px;
+  background: linear-gradient(to right, white, white),
+    linear-gradient(to right, hsl(278, 94%, 30%), hsl(249, 99%, 64%));
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+}
+.borderColor {
+  border: 2px solid hsl(278, 94%, 30%);
+}
+/* BUTTONS */
+.button {
+  background-color: var(--Verydarkviolet);
+  color: var(--White);
+  height: 2.7rem;
+  width: 100%;
+  margin-top: 1.5rem;
+  border: none;
+  border-radius: 7px;
+  /* background-color: hsl(278, 68%, 33%); */
+}
+.button:focus {
+  outline: none;
+}
+.button:hover {
+  background-color: hsl(278, 68%, 33%);
+}
+
+/* THANK YOU MESSAGE POP UP */
+.thank__you--popup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.thank__you {
+  width: 4rem;
+}
+.attribution {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 2rem;
+  color: var(--Red);
+}
+
+.attribution a {
+  color: var(--Verydarkviolet);
+}
+
+@media screen and (min-width: 992px) {
+  body {
+    background-repeat: repeat-y;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    width: 100;
+    overflow: hidden;
+  }
+  main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-width: 900px;
+    width: 100%;
+  }
+  /* img styles and positions */
+  .img__section {
+    position: relative;
+    color: var(--White);
+    margin-right: auto;
+  }
+
+  .img__one {
+    top: -1rem;
+    left: -1rem;
+    margin-right: auto;
+  }
+  .img__two {
+    top: -16rem;
+    right: -3rem;
+
+    margin-right: auto;
+  }
+  /* position img text and logo to cards */
+
+  .figcaption__one {
+    display: block;
+    position: absolute;
+    right: 4rem;
+    top: 1.3rem;
+  }
+
+  .figcaption__two {
+    position: absolute;
+    right: -5rem;
+    top: -13rem;
+    width: 100%;
+  }
+  /*  purple card logo width adjustmensts */
+  .logo {
+    width: 4rem;
+    margin-top: -2rem;
+  }
+  /* card details styles */
+  .zeros {
+    font-size: 1.3rem;
+    margin-left: -2rem;
+    margin-top: 3rem;
+    width: 100%;
+    text-align: center;
+  }
+  .name__date {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 2rem;
+    margin-left: -4.5rem;
+    text-transform: uppercase;
+  }
+  /* form and input styles */
+  form {
+    background-color: var(--White);
+    margin-top: -5rem;
+    margin-right: 2rem;
+    z-index: 100000;
+  }
+  /*  attribution*/
+  .attribution {
+    margin-top: 2rem;
+    z-index: 2;
+  }
+}
