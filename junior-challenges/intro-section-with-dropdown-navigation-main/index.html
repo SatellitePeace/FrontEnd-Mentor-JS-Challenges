@@ -1,39 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
-  Features
-  Company
-  Careers
-  About
+    <!-- css -->
+    <link rel="stylesheet" href="/style.css">
+    <!-- media queries -->
+    <link rel="stylesheet" href="/media-queries.css">
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
 
-  Login
-  Register
+  </head>
 
-  Make remote work
+  <body>
 
-  Get your team in sync, no matter your location. Streamline processes, 
-  create team rituals, and watch productivity soar.
+    <nav>
+      <!-- logo -->
+      <div class="nav__items--container">
+        <figure class="nav__logo">
+          <a href="#"><img src="/images/logo.svg" alt="logo" class="nav__logo--img"></a>
+        </figure>
+        <!-- nav items -->
+        <ul class="nav__items">
+          <li class="nav__links" id="mainnav__features--dropdown">
+            <a href="#">
+              Features
+              <img src="/images/icon-arrow-down.svg" alt="direction arrow" class="arrow__down">
+              <img src="/images/icon-arrow-up.svg" alt="arrow-up" class="arrow__up">
+            </a>
 
-  Learn more
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+            <!-- features dropdown -->
+            <ul class="features__dropdown  dropdown" id="mainnav__features--menu">
+              <li class="dropdown__item">
+                <img src="/images/icon-todo.svg" alt="todo list icon">
+                Todo List
+              </li>
+              <!-- item two -->
+              <li class="dropdown__item">
+                <img src="/images/icon-calendar.svg" alt="calender icon">
+                Calender
+              </li>
+              <!-- item three -->
+              <li class="dropdown__item">
+                <img src="/images/icon-reminders.svg" alt="remainder icon">
+                Reminders
+              </li>
+              <!-- item four -->
+              <li class="dropdown__item">
+                <img src="/images/icon-planning.svg" alt="diary planner">
+                Planning
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="nav__items companies">
+          <!-- second li -->
+          <li class="nav__links" id="mainnav__company--dropdown">
+            <a href="#">
+              Company
+              <img src="/images/icon-arrow-down.svg" alt="direction arrow" class="arrow__down">
+              <img src="/images/icon-arrow-up.svg" alt="arrow-up" class="arrow__up">
+            </a>
+            <!--company dropdown -->
+            <ul class="dropdown" id="mainnav__company--menu">
+              <li class="dropdown__item">
+                History
+              </li>
+              <!-- item two -->
+              <li class="dropdown__item">
+                Our Team
+              </li>
+              <!-- item three -->
+              <li class="dropdown__item">
+                Blog
+              </li>
+
+            </ul>
+          </li>
+        </ul>
+
+        <ul class="nav__items nav__contact--details">
+          <li class="nav_links">
+            <a href="#">Careers</a>
+          </li>
+          <li class="nav_links">
+            <a href="#">About</a>
+          </li>
+        </ul>
+      </div>
+      <!-- second part -->
+      <ul class="nav__items nav__secondary--items">
+        <li>
+          <a href="#">Login</a>
+        </li>
+        <li><a href="#" class="signup__btn btn">
+            Register
+          </a></li>
+      </ul>
+      <div class="mobile__nav--menu" id="open__sidebar">
+        <a href="#"><img src="/images/icon-menu.svg" alt="close menu icon"></a>
+      </div>
+    </nav>
+    <!--  -->
+
+    <!-- END OF NAV -->
+    <header>
+      <div class="header__content--info">
+        <section class="header__content">
+          <h1>
+            Make remote work
+          </h1>
+          <p>
+            Get your team in sync, no matter your location. Streamline processes,
+            create team rituals, and watch productivity soar.
+          </p>
+          <button class="btn header__btn">
+            Learn more
+          </button>
+        </section>
+        <!-- footer items -->
+        <footer>
+          <ul>
+            <li>
+              <img src="/images/client-databiz.svg" alt=" databiz logo image" class="footer__img">
+            </li>
+            <li><img src="/images/client-audiophile.svg" alt="audio phile logo image" class="footer__img"></li>
+            <li>
+              <img src="/images/client-meet.svg" alt=" client meet logo image" class="footer__img">
+            </li>
+            <li><img src="/images/client-maker.svg" alt=" client maker logo image" class="footer__img"></li>
+          </ul>
+        </footer>
+      </div>
+      <!-- img -->
+      <figure class="banner__img--desktop">
+        <img src="/images/image-hero-desktop.png" alt="desktop banner image" class="banner">
+      </figure>
+      <figure class="banner__img--mobile">
+        <img src="/images/image-hero-mobile.png" alt="small screen banner image" class="banner">
+      </figure>
+    </header>
+
+    <!-- /////////////////////////
+SIDEBAR NAVIGATION
+///////////////////////////////////
+-->
+
+    <aside class="sidebar__nav" role="navigation" id="sidebar">
+      <!-- close sidenav btn -->
+      <div class="close__sidebar" id="close__sidebar">
+        <a href="#"><img src="/images/icon-close-menu.svg" alt="close sidebar icon"></a>
+      </div>
+      <!-- nav items -->
+      <!--  -->
+      <ul class="sidebar__items">
+        <li class="sidebar__links" id="features__dropdown">
+          <a href="#">
+            Features
+            <img src="/images/icon-arrow-down.svg" alt="dropdown direction arrow icon" class="sidebar__arrow--down">
+            <img src="/images/icon-arrow-up.svg" alt="arrow-up" class="sidebar__arrow--up">
+          </a>
+          <!-- features dropdown -->
+          <ul class="features__dropdown" id="features__dropdown--menu">
+            <li class="sidebar__dropdown--item">
+              <img src="/images/icon-todo.svg" alt="todo list icon">
+              Todo List
+            </li>
+            <!-- item two -->
+            <li class="sidebar__dropdown--item">
+              <img src="/images/icon-calendar.svg" alt="calender icon">
+              Calender
+            </li>
+            <!-- item three -->
+            <li class="sidebar__dropdown--item">
+              <img src="/images/icon-reminders.svg" alt="diary reminder icon">
+              Reminders
+            </li>
+            <!-- item four -->
+            <li class="sidebar__dropdown--item">
+              <img src="/images/icon-planning.svg" alt="planner icon">
+              Planning
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="sidebar__items ">
+        <!-- second li -->
+        <li class="sidebar__links" id="company__dropdown">
+          <a href="#">
+            Company
+            <img src="/images/icon-arrow-down.svg" alt="dropdown direction arrow icon" class="sidebar__arrow--down">
+            <img src="/images/icon-arrow-up.svg" alt="arrow-up" class="sidebar__arrow--up">
+          </a>
+          <!--company dropdown -->
+          <ul class="company__dropdown" id="company__dropdown--menu">
+            <li class="sidebar__dropdown--item">
+              History
+            </li>
+            <!-- item two -->
+            <li class="sidebar__dropdown--item">
+              Our Team
+            </li>
+            <!-- item three -->
+            <li class="sidebar__dropdown--item">
+              Blog
+            </li>
+
+          </ul>
+        </li>
+      </ul>
+
+      <ul class="sidebar__items">
+        <li class="sidebar__links">
+          <a href="#">Careers</a>
+        </li>
+        <li class="sidebar__links">
+          <a href="#">About</a>
+        </li>
+      </ul>
+      </div>
+      <!-- second part -->
+      <ul class="sidebar__items sidebar__secondary--items">
+        <li>
+          <a href="#">Login</a>
+        </li>
+        <li><a href="#" class="signup__btn ">
+            Register
+          </a></li>
+      </ul>
+    </aside>
+
+    <div class="attribution" role="doc-credits">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Nneoma Peace</a>.
+    </div>
+    <!-- OVERLAY
+     -->
+    <div id="overlay"></div>
+    <!--  -->
+    <script src="/app.js"></script>
+  </body>
+
 </html>

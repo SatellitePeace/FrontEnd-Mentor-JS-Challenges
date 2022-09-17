@@ -1,0 +1,217 @@
+/* MEDIA QUERY FOR CONTROLLING IMAGE TOP MARGIN ON BIG SCREENS */
+@media screen and (min-width: 900px) {
+  .banner__img--desktop {
+    display: block;
+    margin-top: 8rem;
+  }
+  .banner {
+    max-width: 27rem;
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* MEDIA QUERY FOR SIDEBAR NAVIGATION And FOOTER */
+@media screen and (max-width: 1000px) {
+  .header__content h1 {
+    font-size: 2.5rem;
+    margin: 2rem 0 10px;
+  }
+  nav {
+    z-index: 20;
+  }
+  a {
+    color: var(--AlmostBlack);
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: 0.3s;
+  }
+  a:hover {
+    color: var(--MediumGray);
+  }
+  .mobile__nav--menu {
+    display: block;
+  }
+
+  .nav__items {
+    display: none !important;
+  }
+
+  /* SIDEBAR STYLES */
+
+  .sidebar__nav {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 50%;
+    background: var(--Almost-White);
+    padding: 2rem;
+    transform: translateX(100%);
+    transition: 0.3s linear;
+    z-index: 50;
+    overflow: auto;
+  }
+
+  .sidebar__nav.show {
+    transform: translateX(0);
+  }
+  .close__sidebar {
+    text-align: right;
+    margin-bottom: 2rem;
+  }
+
+  .sidebar__items {
+    list-style: none;
+  }
+  .sidebar__items {
+    display: block;
+    margin-bottom: 7px;
+  }
+
+  .company__dropdown,
+  .features__dropdown {
+    list-style: none;
+    margin-left: 2rem;
+    display: none;
+  }
+  .company__dropdown.active,
+  .features__dropdown.active {
+    display: block;
+  }
+  .sidebar__secondary--items {
+    text-align: center;
+  }
+  .sidebar__dropdown--item {
+    padding: 6px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 5s linear;
+  }
+
+  .sidebar__dropdown--item img {
+    padding-right: 10px;
+  }
+  .sidebar__links {
+    color: var(--MediumGray);
+
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  .sidebar__arrow--up {
+    display: none;
+  }
+  .sidebar__arrow--up.rotate {
+    display: inline-block;
+  }
+
+  .sidebar__arrow--down {
+    display: inline-block;
+  }
+  .sidebar__arrow--down.rotate {
+    display: none;
+  }
+
+  .signup__btn {
+    border: 2px solid var(--AlmostBlack);
+    border-radius: 1rem;
+    padding: 10px 0;
+    margin-top: 1rem;
+    width: 100%;
+    display: block;
+    color: var(--AlmostBlack);
+    transition: 0.3s;
+  }
+  .signup__btn:hover {
+    background-color: var(--AlmostBlack);
+    color: var(--Almost-White);
+  }
+  /* BACKGROUN OVERLAY   */
+  .overlay {
+    position: absolute;
+    height: 110%;
+    width: 100vw;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  /* footer */
+  .footer__img {
+    width: 4rem;
+  }
+}
+
+/* SMALL SCREEM MEDIA QUERY */
+@media screen and (max-width: 700px) {
+  body {
+    min-height: 130vh;
+  }
+  .banner__img--desktop {
+    display: none;
+  }
+  .banner__img--mobile {
+    margin-top: 10rem !important;
+    height: 100%;
+    display: block;
+  }
+  .banner {
+    width: 100%;
+  }
+  /* HEADER SECTION */
+  header {
+    max-width: 600px;
+    width: 100%;
+    margin: 1rem auto;
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100%;
+  }
+  .header__content--info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .header__content h1 {
+    font-size: 2rem;
+    margin: 2rem 0 10px;
+  }
+  .header__content p {
+    font-size: 1rem;
+    line-height: 2rem;
+    color: var(--MediumGray);
+  }
+  footer {
+    margin-top: -3rem;
+    margin-bottom: 1rem;
+  }
+  footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+  }
+  .footer__img {
+    width: 4.5rem;
+  }
+  .attribution {
+    display: block;
+    padding-bottom: 1rem;
+  }
+  /* BACKGROUN OVERLAY   */
+  .overlay {
+    position: absolute;
+    height: 136%;
+    width: 100vw;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+}
