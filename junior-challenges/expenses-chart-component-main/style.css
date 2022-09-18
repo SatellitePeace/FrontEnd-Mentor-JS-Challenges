@@ -33,6 +33,7 @@ body {
   overflow: hidden;
   margin: 3rem;
 }
+
 /* HEADING SECTION STYLES */
 .heading__section {
   background-color: var(--Soft-red);
