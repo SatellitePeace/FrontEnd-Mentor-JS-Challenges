@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* ### Primary */
+  --LightCyan: hsl(193, 38%, 86%);
+  --NeonGreen: hsl(150, 100%, 66%);
+  /* ### Neutral */
+  --GrayishBlue: hsl(217, 19%, 38%);
+  --DarkGrayishBlue: hsl(217, 19%, 24%);
+  --Dark-Blue: hsl(218, 23%, 16%);
+}
+
+body {
+  background-color: var(--Dark-Blue);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 2rem;
+  font-family: Manrope;
+  font-weight: 600;
+  overflow: hidden;
+  color: rgb(50, 58, 73);
+}
+main {
+  background-color: var(--DarkGrayishBlue);
+  position: relative;
+  max-width: 375px;
+  width: 100%;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  border-radius: 14px;
+  box-shadow: -15px -15px 15px rgba(31, 38, 50, 0.8),
+    15px 15px 15px rgba(50, 58, 73, 0.8),
+    inset -5px -5px 5px rgba(31, 38, 50, 0.8),
+    inset 5px 5px 5px rgba(50, 58, 73, 0.8);
+}
+
+.advice__heading {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--NeonGreen);
+}
+.advice__text,
+.loading__text {
+  font-size: 21px;
+  color: var(--LightCyan);
+  line-height: 1.7rem;
+  margin: 1rem 0;
+}
+.divider {
+  margin: 1rem 0;
+}
+.desktop__divider {
+  display: none;
+}
+.advice__btn {
+  background-color: var(--NeonGreen);
+  position: absolute;
+  bottom: -1.2rem;
+  left: 50%;
+  right: 50%;
+  transform: translateX(-40%);
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+}
+.advice__btn:hover {
+  box-shadow: 0 0 10px var(--NeonGreen), 0 0 40px var(--NeonGreen),
+    0 0 80px var(--NeonGreen);
+}
+.advice__btn img {
+  position: absolute;
+  bottom: 2.7px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1.3rem;
+}
+
+.attribution {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    background-color: var(--DarkGrayishBlue);
+    position: relative;
+    max-width: 500px;
+    width: 100%;
+    padding: 2rem;
+  }
+  .advice__heading {
+    font-size: 1rem;
+  }
+  .advice__text,
+  .loading__text {
+    font-size: 28px;
+    color: var(--LightCyan);
+    line-height: 2rem;
+    margin: 1rem 0;
+  }
+  .mobile__divider {
+    display: none;
+  }
+  .desktop__divider {
+    display: block;
+  }
+  .advice__btn {
+    background-color: var(--NeonGreen);
+    position: absolute;
+    bottom: -1.5rem;
+    height: 3.3rem;
+    width: 3.3rem;
+    border-radius: 50%;
+  }
+  .advice__btn img {
+    bottom: 2px;
+    width: initial;
+  }
+}
