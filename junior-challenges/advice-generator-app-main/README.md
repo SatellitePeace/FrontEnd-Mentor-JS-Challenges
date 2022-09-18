@@ -40,4 +40,6 @@ I learned how to make a button glow on hover state using box shadow
 }
 ```
 
-- Website - Nneoma Peace
+### Author
+
+- Nneoma Peace
