@@ -1,51 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Notifications page</title>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+    <!-- favicon icon -->
+    <link rel="shortcut icon" href="/assets/images/favicon-32x32.png" type="image/x-icon">
+    <!-- csss -->
+    <link rel="stylesheet" href="/style.css">
+    <title>Frontend Mentor | Notifications page</title>
+  </head>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+  <body>
 
-  Notifications 3
+    <main>
+      <!-- nav -->
+      <nav>
+        <article class="notification">
+          <h1>
+            Notifications <span id="notifications">3</span>
+          </h1>
+        </article>
+        <article>
+          <h2>
+            <a href="#" id="mark__as--read">Mark all as read</a>
+          </h2>
+        </article>
+      </nav>
+      <!-- body -->
+      <!-- toggle read and unread -->
+      <div class="user__info read mark" role="article">
+        <article class="users">
+          <figure class="user__img">
+            <img src="/assets/images/avatar-mark-webber.webp" alt="photo of mark webber" class="person">
+          </figure>
+          <h3> Mark Webber <span>reacted to your recent <strong>post My first tournament today!</strong>
+            </span> <span class="unread__msgs"></span></h3>
+        </article>
+        <small class="time">
+          1m ago
+        </small>
+      </div>
+      <!-- article two -->
+      <div class="user__info read mark" role="article">
+        <article class="users">
+          <figure class="user__img">
+            <img src="/assets/images/avatar-angela-gray.webp" alt="photo of angela grey" class="person">
+          </figure>
+          <h3>Angela Gray <span>followed you
+            </span> <span class="unread__msgs"></span></h3>
+        </article>
+        <small class="time">
+          5m ago
+        </small>
+      </div>
+      <!-- article three -->
+      <div class="user__info read mark" role="article">
+        <article class="users">
+          <figure class="user__img">
+            <img src="/assets/images/avatar-jacob-thompson.webp" alt="photo of Jacob Thompson" class="person">
+          </figure>
+          <h3> Jacob Thompson <span>has joined your group <strong>
+                Chess Club
+              </strong>
+            </span> <span class="unread__msgs"></span></h3>
+        </article>
+        <small class="time">
+          1m ago
+        </small>
+      </div>
+      <!--  -->
 
-  Mark all as read
+      <!-- read article one -->
+      <div class="user__info" role="article">
+        <article class="users">
+          <figure class="user__img">
+            <img src="/assets/images/avatar-rizky-hasanuddin.webp" alt="photo of  Rizky Hasanuddin " class="person">
+          </figure>
+          <h3>Rizky Hasanuddin <span>sent you a private message
+            </span></h3>
+        </article>
+        <small class="time">
+          5 days ago
+        </small>
+        <p class="read__msg--text">
+          Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and
+          I'm already having lots of fun and improving my game.
+        </p>
+      </div>
 
-  Mark Webber reacted to your recent post My first tournament today!
-  1m ago
+      <!-- read article two -->
+      <div class="user__info" role="article">
+        <article class="users">
+          <figure class="user__img">
+            <img src="/assets/images/avatar-kimberly-smith.webp" alt="photo of Kimberly Smith " class="person">
+          </figure>
+          <h3>Kimberly Smith <span>commented on your picture
+            </span> </span></h3>
+          <figure class="second__img">
+            <img src="/assets/images/image-chess.webp" alt="woman playing chess" class="square__person">
+          </figure>
+      </div>
+      <small class="time">
+        1 week ago
+      </small>
+      </article>
 
-  Angela Gray followed you
-  5m ago
+      <!-- more article -->
+      <div class="user__info" role="article">
+        <article class="users">
+          <figure class="user__img">
+            <img src="/assets/images/avatar-nathan-peterson.webp" alt="photo of Nathan Peterson" class="person">
+          </figure>
+          <h3>Nathan Peterson <span>reacted to your recent post <strong>5 end-game strategies to increase your win
+                rate</strong>
+            </span></h3>
+        </article>
+        <small class="time">
+          2 weeks ago
+        </small>
+      </div>
+      <!--last  article -->
+      <div class="user__info" role="article">
+        <article class="users">
+          <figure class="user__img">
+            <img src="/assets/images/avatar-anna-kim.webp" alt="photo of Anna Kim" class="person">
+          </figure>
+          <h3> Anna Kim <span>left the group <strong>
+                Chess Club
+              </strong>
+            </span></h3>
+        </article>
+        <small class="time">
+          2 weeks ago
+        </small>
+      </div>
+    </main>
+    <footer class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://www.frontendmentor.io/profile">Nneoma Peace</a>.
+    </footer>
+    <!-- JS -->
+    <script src="/app.js"></script>
+  </body>
 
-  Jacob Thompson has joined your group Chess Club
-  1 day ago
-
-  Rizky Hasanuddin sent you a private message
-  5 days ago
-  Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and 
-  I'm already having lots of fun and improving my game.
-
-  Kimberly Smith commented on your picture
-  1 week ago
-
-  Nathan Peterson reacted to your recent post 5 end-game strategies to increase your win rate
-  2 weeks ago
-
-  Anna Kim left the group Chess Club
-  2 weeks ago
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
 </html>

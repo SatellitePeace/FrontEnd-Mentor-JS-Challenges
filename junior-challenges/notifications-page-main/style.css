@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,800;1,400&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  /* ### Primary */
+  --Red: hsl(1, 90%, 64%);
+  --Blue: hsl(219, 85%, 26%);
+  /* ### Neutral */
+  --White: hsl(0, 0%, 100%);
+  --Verylightgrayishblue: hsl(210, 60%, 98%);
+  --Lightgrayishblue1: hsl(211, 68%, 94%);
+  --Lightgrayishblue2: hsl(205, 33%, 90%);
+  --Grayishblue: hsl(219, 14%, 63%);
+  --Darkgrayishblue: hsl(219, 12%, 42%);
+  --Verydarkblue: hsl(224, 21%, 14%);
+  /* dark */
+}
+
+body {
+  font-family: Jakarta Sans, sans-serif;
+  background-color: var(--Lightgrayishblue2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 2rem;
+  scroll-behavior: smooth;
+}
+/* body.dark {
+  background-color: var(--Verydarkblue);
+} */
+main {
+  background-color: var(--White);
+  max-width: 375px;
+  width: 100%;
+  padding: 2rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+/* light and dark mode */
+aside {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+.moon {
+  color: var(--Blue);
+}
+.sun {
+  color: var(--Red);
+}
+.moon,
+.sun {
+  padding: 7px;
+  border: none;
+  background-color: var(--Lightgrayishblue1);
+  cursor: pointer;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  border-bottom: 2px dashed var(--Lightgrayishblue1);
+}
+.notification h1 {
+  text-transform: capitalize;
+  font-size: 1.4rem;
+  transition: 0.3s;
+  margin-bottom: 14px;
+}
+
+.notification h1 span {
+  background-color: var(--Blue);
+  padding: 5px 10px;
+  font-size: 1rem;
+  color: var(--White);
+  border-radius: 10px;
+  margin-bottom: 14px;
+}
+nav a {
+  font-size: 1rem;
+  text-decoration: none;
+  color: var(--Verydarkblue);
+  margin-bottom: 14px;
+  transition: 0.3s;
+}
+nav a:hover {
+  color: var(--Blue);
+}
+/* main body */
+.user__info {
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+.users {
+  display: flex;
+  align-items: center;
+}
+.users h3 {
+  font-size: 1rem;
+  transition: 0.3s;
+}
+.users h3:hover {
+  color: var(--Blue);
+}
+.users h3 span {
+  font-weight: 300;
+  font-size: 14px;
+  color: var(--Darkgrayishblue);
+}
+.users h3 span:hover {
+  color: var(--Darkgrayishblue);
+}
+.read {
+  padding: 10px;
+}
+.read.mark {
+  background-color: var(--Lightgrayishblue1);
+}
+.unread__msgs {
+  display: inline-block;
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  background-color: var(--Red);
+}
+.unread__msgs.unread {
+  display: none;
+}
+.person {
+  width: 2rem;
+  margin-right: 12px;
+}
+.second__img {
+  margin-left: auto;
+}
+.square__person {
+  width: 2.5rem;
+  cursor: pointer;
+  margin-right: 2px;
+}
+.read__msg--text {
+  cursor: pointer;
+  margin-left: 3rem;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  line-height: 1.5rem;
+  border: 1px solid var(--Lightgrayishblue2);
+  color: var(--Darkgrayishblue);
+  transition: 0.3s;
+}
+.read__msg--text:hover {
+  background-color: var(--Lightgrayishblue1);
+}
+strong {
+  color: var(--Blue);
+  cursor: pointer;
+}
+.time {
+  margin-left: 2.7rem;
+}
+.attribution {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    max-width: 670px;
+    width: 100%;
+  }
+  .notification h1 {
+    font-size: 1.8rem;
+  }
+
+  .notification h1 span {
+    font-size: 1.4rem;
+  }
+  nav a {
+    font-size: 1.2rem;
+  }
+  /* main body */
+
+  .users {
+    display: flex;
+    align-items: center;
+  }
+  .users h3 {
+    font-size: 1.3rem;
+  }
+  .users h3:hover {
+    color: var(--Blue);
+  }
+  .users h3 span {
+    font-size: 1.05rem;
+  }
+
+  .person {
+    width: 3rem;
+    margin-right: 12px;
+  }
+  .square__person {
+    width: 2.7rem;
+  }
+  .time {
+    margin-left: 3.5rem;
+  }
+}
