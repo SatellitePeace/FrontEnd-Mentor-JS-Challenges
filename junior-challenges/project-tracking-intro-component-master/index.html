@@ -1,39 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Project tracking intro component</title>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+    <link rel="shortcut icon" href="/images/favicon-32x32.png" type="image/x-icon">
+    <!-- css -->
+    <link rel="stylesheet" href="/style.css">
+    <title>Frontend Mentor | Project tracking intro component</title>
+  </head>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-  Product
-  Features
-  Pricing
-  Login
+  <body>
+    <main>
+      <nav>
+        <figure class="logo__container">
+          <img src="/images/logo.svg" alt="logo image" class="logo">
+        </figure>
+        <div class="navigation" role="navigation">
+          <ul class="navigation__items">
+            <li><a href="#">Product</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Pricing</a></li>
+          </ul>
+          <p class="bigscreen__login">
+            <a href="#">Login</a>
+          </p>
+        </div>
+        <article class="small__nav--controls">
+          <div class="nav__controls">
+            <figure class="hamburger">
+              <a href="#"><img src="/images/icon-hamburger.svg" alt="hamburger icon" id="open"></a>
+            </figure>
+            <figure class="close__hambuger">
+              <a href="#"><img src="/images/icon-close.svg" alt="close icon" id="close" class="close"></a>
+            </figure>
+            <!-- small nav items -->
+            <ul class="small__nav">
+              <li><a href="#">Product</a></li>
+              <li><a href="#">Features</a></li>
+              <li><a href="#">Pricing</a></li>
+              <p class="small__nav--login">
+                <li><a href="#" class="login">Login</a></li>
+              </p>
+            </ul>
+          </div>
+        </article>
+      </nav>
+      <!-- main body content -->
+      <header>
+        <article class="header__text--content">
+          <p class="heading__subtitle">
+            <span>New</span>
+            Monograph Dashboard
+          </p>
+          <h1 class="heading">
+            Powerful insights <span>into your team</span>
+          </h1>
+          <p class="heading__text">
+            Project planning and time tracking for<span> agile teams</span>
+          </p>
+          <div class="heading__btn">
+            <button class="btn">
+              Schedule a demo
+            </button>
+            <p class="btn__text">
+              to see a live preview
+            </p>
+          </div>
+        </article>
+        <!-- img hero -->
+        <figure class="hero__banner wave">
+          <img src="/images/illustration-devices.svg" alt="main image of a desktop and a phone" class="banner__img">
+        </figure>
+      </header>
+    </main>
+    <footer>
+      <p class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="https://www.frontendmentor.io/profile/SatellitePeace">Nneoma Peace</a>.
+      </p>
+    </footer>
+    <!--  -->
+    <script src="/app.js"></script>
+  </body>
 
-  New
-  Monograph Dashboard
-
-  Powerful insights into your team
-  Project planning and time tracking for agile teams
-
-  Schedule a demo
-  to see a live preview
-  
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
-</body>
 </html>
