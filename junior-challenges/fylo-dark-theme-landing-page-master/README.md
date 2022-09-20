@@ -32,7 +32,7 @@ Although it was not required by the challenge, i added a hamburger menu for scre
 - Flexbox
 - Bootstrap
 - Mobile-first workflow
-  -Javascript
+- Javascript
 
 ## Author
 
