@@ -17,7 +17,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: https://friendly-price-toggle-cards.netlify.app/
+- Live Site URL: https://friendly-price-toggle-cards.netlify.app
 
 ### Built with
 
