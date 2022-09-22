@@ -1,0 +1,249 @@
+/* RESET CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* ROOT */
+:root {
+  /* ### Primary */
+  --LinearGradient: hsl(236, 72%, 79%) to hsl(237, 63%, 64%);
+  /* ### Neutral */
+  --VeryLightGrayishBlue: hsl(240, 78%, 98%);
+  --LightGrayishBlue: hsl(234, 14%, 74%);
+  --GrayishBlue: hsl(233, 13%, 49%);
+  --DarkGrayishBlue: hsl(232, 13%, 33%);
+}
+body {
+  background: var(--VeryLightGrayishBlue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 3rem;
+  font-family: sans-serif;
+}
+/* MAIN CONTENTS */
+main {
+  max-width: 375px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* CONTENT HEADING */
+.title__and--toggle {
+  text-align: center;
+  margin: 1.5rem auto;
+  color: var(--DarkGrayishBlue);
+}
+.title__and--toggle h1 {
+  margin-bottom: 1.5rem;
+}
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: bolder;
+}
+/* HEADING INPUT CHECKBOX CUSTOM STYLES */
+input[type="checkbox"] {
+  position: relative;
+  width: 70px;
+  height: 30px;
+  appearance: none;
+  background: linear-gradient(
+    to top right,
+    hsl(236, 72%, 79%),
+    hsl(237, 63%, 64%)
+  );
+  outline: none;
+  border-radius: 20px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+input:checked[type="checkbox"] {
+  background: linear-gradient(
+    to top right,
+    hsl(234, 14%, 74%),
+    hsl(233, 13%, 49%)
+  );
+}
+input[type="checkbox"]::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  top: 15%;
+  left: 5px;
+  background: var(--VeryLightGrayishBlue);
+  transform: scale(1.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: 0.5s;
+}
+input:checked[type="checkbox"]::before {
+  left: 45px;
+}
+/* CARDS SECTION */
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+.card {
+  background-color: #fff;
+  color: var(--DarkGrayishBlue);
+  min-width: 270px;
+  max-width: 375px;
+  width: 100%;
+  padding: 1.2rem;
+  border-radius: 0.3rem;
+  text-align: center;
+  box-shadow: 1px 5px 5px 5px rgba(17, 91, 228, 0.3);
+}
+
+.blue__card {
+  background: linear-gradient(
+    to top right,
+    hsl(236, 72%, 79%),
+    hsl(237, 63%, 64%)
+  );
+  color: #fff;
+}
+
+.card__heading {
+  margin-bottom: 2rem;
+}
+.card__heading h2 {
+  font-size: 1rem;
+  margin: 2rem 0 0.5rem;
+}
+.card__heading p {
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+
+.list-group {
+  list-style: none;
+}
+.list-group-item {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--GrayishBlue);
+}
+.blue__card--item li {
+  border-bottom: 1px solid var(--VeryLightGrayishBlue);
+}
+/* CARD BUTTONS */
+button {
+  border: none;
+  border-radius: 0.5rem;
+  width: 100%;
+  height: 2.5rem;
+  margin: 0 0 0.5rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.7rem;
+  transition: 0.3s linear !important;
+}
+.btn {
+  background: linear-gradient(
+    to top right,
+    hsl(236, 72%, 79%),
+    hsl(237, 63%, 64%)
+  );
+  color: #fff;
+}
+.btn:hover {
+  background: transparent;
+  color: hsl(237, 63%, 64%);
+  border-image: linear-gradient(
+      to top right,
+      hsl(236, 72%, 79%),
+      hsl(237, 63%, 64%)
+    )
+    30;
+  border-width: 1px;
+  border-image: linear-gradient(
+    45deg,
+    hsl(236, 72%, 79%) 0%,
+    hsl(237, 63%, 64%) 100%
+  );
+  border-image-slice: 9;
+  border-style: solid;
+}
+.btn__blue {
+  background-color: #fff;
+  color: var(--DarkGrayishBlue);
+}
+.btn__blue:hover {
+  background: transparent;
+  border: 1px solid #fff;
+  color: var(--VeryLightGrayishBlue);
+}
+/* FOOTER */
+.attribution {
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+/* MEDIA QUERIES FOR BIGGER SCREENS */
+@media screen and (min-width: 600px) {
+  /* input */
+  input[type="checkbox"] {
+    width: 80px;
+    height: 40px;
+  }
+  input[type="checkbox"]::before {
+    width: 30px;
+    height: 30px;
+    top: 12%;
+  }
+  /* card */
+  .card {
+    min-width: 350px;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  body {
+    margin: 0 auto;
+  }
+  main {
+    max-width: 800px;
+    width: 100%;
+    max-height: 100vh;
+  }
+  .cards {
+    flex-direction: row;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  .card {
+    background-color: #fff;
+    color: var(--DarkGrayishBlue);
+    min-width: 270px;
+    max-width: 375px;
+    width: 100%;
+    padding: 1.2rem;
+    border-radius: 0.3rem;
+    text-align: center;
+    box-shadow: 1px 3px 3px 3px rgba(17, 91, 228, 0.3);
+  }
+  .blue__card {
+    color: var(--VeryLightGrayishBlue);
+    transform: scale(1.1);
+    box-shadow: -5px -5px 5px rgba(255, 255, 255, 1),
+      5px 5px 5px rgba(255, 255, 255, 1);
+  }
+}
