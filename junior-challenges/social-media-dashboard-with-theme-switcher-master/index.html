@@ -1,87 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | [Challenge Name Here]</title>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+    <!-- CUSTOM CSS LINK -->
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  Social Media Dashboard
-  Total Followers: 23,004
-
-  Dark Mode
-
-  
-
-  @nathanf
-  1987
-  Followers
-  12 Today
-
-  @nathanf
-  1044
-  Followers
-  99 Today
-
-  @realnathanf
-  11k
-  Followers
-  1099 Today
-
-  Nathan F.
-  8239
-  Subscribers
-  144 Today
+    <title>Frontend Mentor | [Challenge Name Here]</title>
 
 
+  </head>
 
-  Overview - Today
+  <body>
+    <header>
+      <article>
+        <h1>
+          Social Media Dashboard
+        </h1>
+        <small>
+          Total Followers: 23,004
+        </small>
+      </article>
+      <form>
+        <p>
+          Dark Mode
+        </p>
+        <div>
+          <input type="checkbox" id="checkbox">
+        </div>
+      </form>
+    </header>
+    <!-- MAIN -->
+    <main>
+      <div class="section__one" role="directory">
+        <!-- card one -->
+        <article class="followers__card facebook__card ">
+          <figure class="username username__facebook">
+            <a href="#">
+              <img src="/images/icon-facebook.svg" alt="facebook icon"> @nathanf
+            </a>
+          </figure>
+          <h2>
+            1987
+          </h2>
+          <p>
+            Followers
+          </p>
+          <figure>
+            <img src="/images/icon-up.svg" alt="arrow up positive growth icon">
+            <strong>12 Today</strong>
+          </figure>
+        </article>
+        <!-- card two -->
+        <article class="followers__card twitter__card ">
+          <figure class="username username__twiiter">
+            <a href=" #"><img src="/images/icon-twitter.svg" alt="twitter icon"> @nathanf</a>
+          </figure>
+          <h2>
+            1044
+          </h2>
+          <p>
+            Followers
+          </p>
+          <figure>
+            <img src="/images/icon-up.svg" alt="arrow up positive growth icon">
+            <strong>99 Today</strong>
+          </figure>
+        </article>
+        <!-- card three -->
+        <article class="followers__card instagram__card ">
+          <figure class="username username__instagram">
+            <a href="#"><img src="/images/icon-instagram.svg" alt="instagram icon"> @realnathanf</a>
+          </figure>
+          <h2>
+            11k
+          </h2>
+          <p>
+            Followers
+          </p>
+          <figure>
+            <img src="/images/icon-up.svg" alt="arrow up positive growth icon">
+            <strong>1099 Today</strong>
+          </figure>
+        </article>
+        <!-- card four -->
+        <article class="followers__card youtube__card ">
+          <figure class="username username__youtube">
+            <a href="#"><img src="/images/icon-youtube.svg" alt="youtube icon"> Nathan F.</a>
+          </figure>
+          <h2>
+            8239
+          </h2>
+          <p>
+            Subscribers
+          </p>
+          <figure>
+            <img src="/images/icon-down.svg" alt="arrow down negative growth icon">
+            <strong class="lost__subscribers">144 Today</strong>
+          </figure>
+        </article>
+      </div>
+      <!-- END OF FOLLOWERS -->
+      <article>
+        <h3>
+          Overview - Today
+        </h3>
+      </article>
 
-  Page Views
-  87
-  3%
+      <section class="section__two">
+        <div class="likes__card" role="text">
+          <article class="likes__overview">
+            <h4>
+              Page Views
+            </h4>
+            <figure><img src="/images/icon-facebook.svg" alt="facebook"></figure>
+          </article>
+          <article class=" likes__details">
+            <h5>
+              87
+            </h5>
+            <figure>
+              <img src="/images/icon-up.svg" alt="positive green growth arrow"> 3%
+            </figure>
+          </article>
+        </div>
+        <!-- card two -->
+        <div class="likes__card" role="text">
+          <article class="likes__overview">
+            <h4>
+              Likes
+            </h4>
+            <figure><img src="/images/icon-facebook.svg" alt="facebook"></figure>
+          </article>
+          <article class="likes__details">
+            <h5>
+              52
+            </h5>
+            <figure class="negative__arrow">
+              <img src="/images/icon-down.svg" alt="negative red growth arrow"> 2%
+            </figure>
+          </article>
+        </div>
+        <!-- card three -->
+        <div class="likes__card" role="text">
+          <article class="likes__overview">
+            <h4>
+              Likes
+            </h4>
+            <figure><img src="/images/icon-instagram.svg" alt="instagram"></figure>
+          </article>
+          <article class="likes__details">
+            <h5>
+              5462
+            </h5>
+            <figure>
+              <img src="/images/icon-up.svg" alt="positive green growth arrow"> 2257%
+            </figure>
+          </article>
+        </div>
+        <!-- card four -->
+        <div class="likes__card" role="text">
+          <article class="likes__overview">
+            <h4>
+              Profile Views
+            </h4>
+            <figure><img src="/images/icon-instagram.svg" alt="instagram"></figure>
+          </article>
+          <article class="likes__details">
+            <h5>
+              52k
+            </h5>
+            <figure>
+              <img src="/images/icon-up.svg" alt="positive green growth arrow"> 1375%
+            </figure>
+          </article>
+        </div>
+      </section>
+      <!--  -->
+      <section class="section__three">
+        <div class="likes__card" role="text">
+          <article class="likes__overview">
+            <h4>
+              Retweets
+            </h4>
+            <figure><img src="/images/icon-twitter.svg" alt="twitter"></figure>
+          </article>
+          <article class="likes__details">
+            <h5>
+              117
+            </h5>
+            <figure>
+              <img src="/images/icon-up.svg" alt="positive green growth arrow">
+              303%
+            </figure>
+          </article>
+        </div>
+        <!-- card two -->
+        <div class="likes__card" role="text">
+          <article class="likes__overview">
+            <h4>
+              Likes
+            </h4>
+            <figure><img src="/images/icon-twitter.svg" alt="twitter"></figure>
+          </article>
+          <article class="likes__details">
+            <h5>
+              507
+            </h5>
+            <figure>
+              <img src="/images/icon-up.svg" alt="positive green growth arrow"> 553%
+            </figure>
+          </article>
+        </div>
+        <!-- card three -->
+        <div class="likes__card" role="text">
+          <article class="likes__overview">
+            <h4>
+              Likes
+            </h4>
+            <figure><img src="/images/icon-youtube.svg" alt="youtube icon"></figure>
+          </article>
+          <article class="likes__details">
+            <h5>
+              107
+            </h5>
+            <figure class="negative__arrow">
+              <img src="/images/icon-down.svg" alt="negative red down arrow"> 19%
+            </figure>
+          </article>
+        </div>
+        <!-- card four -->
+        <div class="likes__card" role="text">
+          <article class="likes__overview">
+            <h4>
+              Total Views
+            </h4>
+            <figure><img src="/images/icon-youtube.svg" alt="youtube icon"></figure>
+          </article>
+          <article class="likes__details">
+            <h5>
+              1407
+            </h5>
+            <figure class="negative__arrow">
+              <img src="/images/icon-down.svg" alt="negative red down arrow"> 12%
+            </figure>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://www.frontendmentor.io/profile/SatellitePeace">Nneoma Peace</a>.
+    </footer>
+    <!-- JS -->
+    <script src="/app.js"></script>
+  </body>
 
-  Likes
-  52
-  2%
-
-  Likes
-  5462
-  2257%
-
-  Profile Views
-  52k
-  1375%
-
-  Retweets
-  117
-  303%
-
-  Likes
-  507
-  553%
-
-  Likes
-  107
-  19%
-
-  Total Views
-  1407
-  12%
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
 </html>
