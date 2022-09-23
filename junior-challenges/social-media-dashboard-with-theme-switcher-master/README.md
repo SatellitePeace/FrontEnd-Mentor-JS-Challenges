@@ -35,7 +35,8 @@ Users should be able to:
 
 I learned how to create a theme toggle without having to change the colors for each item. All i did was change the colours in the variables add them in a new class and use Javascript to toggle the class when the checkbox is checked/unchecked
 
-```.dark {
+```
+.dark {
   --VeryDarkBlueBG: hsl(0, 0%, 100%);
   --VeryDarkBlueTopBGPattern: hsl(225, 100%, 98%);
   --DarkDesaturatedBlueCardBG: hsl(227, 47%, 96%);
