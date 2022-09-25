@@ -1,0 +1,26 @@
+.success.show {
+  transform: translate(-50%, -50%) scale(1);
+}
+.success {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 0.3s linear;
+  z-index: 2;
+  &__heading {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+  }
+  &__text {
+    font-size: 0.9rem;
+    line-height: 1.3rem;
+    color: var(--Darkgray);
+  }
+  &__btn {
+    padding: 1rem;
+    color: var(--White);
+    background-color: var(--Darkcyan);
+    margin-top: 2rem;
+  }
+}

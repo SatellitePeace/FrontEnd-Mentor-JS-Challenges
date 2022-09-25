@@ -1,0 +1,363 @@
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@300;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: honeydew;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  min-height: 100vh;
+  font-family: Commissioner, sans-serif;
+  position: relative;
+}
+h1 {
+  font-size: 1.2rem;
+  margin: 1rem 0 1rem 0;
+}
+// header
+header {
+  height: 50vh;
+  width: 100%;
+  background: url("/images/image-hero-mobile.jpg");
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+}
+// nav
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+}
+// SMALL SCREEN
+.list {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  display: none;
+  &__item {
+    font-size: 1.2rem;
+  }
+  &__links {
+    text-decoration: none;
+    color: #fff;
+  }
+}
+// smallcreen nav
+.smallnav {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  list-style: none;
+  background: var(--White);
+  max-width: 300px;
+  width: 100%;
+  border-radius: 0.5rem;
+  z-index: 10;
+  transition: 0.3s linear;
+  &__item {
+    padding: 1.2rem 1rem;
+    &:not(:last-child) {
+      border-bottom: 1px solid var(--Darkgray);
+    }
+  }
+  &__links {
+    text-decoration: none;
+    color: var(--Black);
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+}
+// small nav controls
+.close__menu {
+  display: none;
+}
+.smallnav.open {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+// BOOKMARK
+// MAIN
+main {
+  max-width: 375px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+// general section styles
+section {
+  padding: 2rem;
+  max-width: 360px;
+  width: 100%;
+  left: 0;
+  right: 0;
+  background-color: var(--White);
+  position: absolute;
+  text-align: center;
+  border-radius: 0.5rem;
+}
+// section one
+.section__one {
+  top: -3rem;
+  &--logo {
+    position: absolute;
+    top: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &--text {
+    margin: 1rem;
+    font-size: 0.9rem;
+    line-height: 1rem;
+    color: var(--Darkgray);
+  }
+}
+// SVG
+circle {
+  fill: var(--gray);
+  stroke-width: 2px;
+  transition: 0.3s ease;
+  &.mark {
+    fill: var(--Moderatecyan);
+  }
+}
+.bookmark {
+  display: flex;
+  justify-content: space-between;
+  &__item {
+    background: var(--Moderatecyan);
+    color: var(--White);
+    padding: 0 0.6rem;
+    height: 2.5rem;
+    display: inline-block;
+
+    &:hover,
+    &:active {
+      background: var(--Darkcyan);
+    }
+  }
+  &__link {
+    text-decoration: none;
+    color: var(--White);
+  }
+  &__btn {
+    display: inline-block;
+    position: relative;
+    display: flex;
+  }
+  &__img {
+    position: absolute;
+    right: 0;
+    top: -0.7rem;
+  }
+  &__icon {
+    width: 3rem;
+  }
+  &__item--2 {
+    height: 2rem;
+    width: 7rem;
+    text-align: end;
+    padding-right: 0.5rem;
+    background: var(--gray);
+    font-weight: 600;
+    border-radius: 1rem;
+    font-size: 0.9rem;
+    display: none;
+    transition: 0.3s ease;
+    &.mar {
+      background: var(--Moderatecyan);
+      color: var(--White);
+    }
+  }
+}
+
+// bookmark btn
+// SECTION TWO
+.section__two {
+  top: 12rem;
+}
+.stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  &__article {
+    padding: 0.5rem 0;
+    // width: 60%;
+    margin-bottom: 1rem;
+    &:not(:last-child) {
+      border-bottom: 1px solid var(--Darkgray);
+    }
+  }
+}
+.stats small {
+  color: var(--Darkgray);
+  display: inline-block;
+  margin-top: 1rem 0;
+}
+#range {
+  width: 100%;
+  appearance: none;
+  background-color: var(--Darkgray);
+  outline: none;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+#range::-webkit-slider-thumb {
+  appearance: none;
+  width: 0.85rem;
+  height: 0.85rem;
+  border-radius: 50%;
+  background-color: var(--Moderatecyan);
+  cursor: pointer;
+  border: 2px solid var(--gray);
+  box-shadow: -407px 0 0 400px var(--Darkcyan);
+}
+// SECTION THREE . ABOUT SECTION
+.section__three {
+  text-align: start;
+  top: 33.5rem;
+}
+
+.about {
+  &__text {
+    margin: 1rem 0 2rem;
+    color: var(--Darkgray);
+  }
+  &__article {
+    border: 1px solid var(--Darkgray);
+    border-radius: 0.27rem;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    p {
+      font-size: 0.9rem;
+      color: var(--Darkgray);
+    }
+    &--headings {
+      display: flex;
+      gap: 0.3rem;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+      p {
+        color: var(--Moderatecyan);
+      }
+    }
+
+    &--footer {
+      font-size: 1.5rem;
+      margin-top: 1.3rem;
+      span {
+        font-size: 0.8rem;
+        color: var(--Darkgray);
+      }
+    }
+    &--btn {
+      color: var(--White);
+      background-color: var(--Moderatecyan);
+      height: 2.5rem;
+      padding: 0 2rem;
+      margin-top: 1rem;
+      transition: 0.3s linear;
+      &:hover {
+        background-color: var(--Darkcyan);
+      }
+    }
+  }
+  &__mahogany {
+    opacity: 0.2;
+    &--btn {
+      cursor: no-drop;
+    }
+  }
+}
+// MEDIA QUERIES
+@media screen and (min-width: 768px) {
+  header {
+    background: url("/images/image-hero-desktop.jpg");
+  }
+  .list {
+    display: flex;
+  }
+  .menu {
+    display: none;
+  }
+  //   MAIN
+  main {
+    max-width: 600px;
+    width: 100%;
+  }
+  section {
+    max-width: 800px;
+    width: 100%;
+  }
+  // BOOKMARK
+  .bookmark {
+    &__img {
+      position: absolute;
+      right: 5rem;
+      top: -0.7rem;
+    }
+
+    &__item--2 {
+      display: block;
+    }
+  }
+
+  //   SECTION TWO
+  .section__two {
+    top: 10rem;
+  }
+  .stats {
+    flex-direction: row;
+    justify-content: space-between;
+    &__article {
+      padding: 0.5rem 0;
+      margin-bottom: 0;
+      width: 60%;
+      &:not(:last-child) {
+        border-bottom: 0;
+        border-right: 1px solid var(--Darkgray);
+      }
+    }
+  }
+  #range {
+    display: inline-block;
+    margin-top: 2.5rem;
+  }
+  //   SECTION THREE
+  .section__three {
+    text-align: start;
+    top: 23rem;
+  }
+  .about {
+    &__text {
+      margin: 1rem 0 2rem;
+      color: var(--Darkgray);
+    }
+    &__article {
+      padding: 1.3rem;
+      &--headings {
+        flex-direction: row;
+      }
+      &--footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 2rem;
+      }
+    }
+  }
+}

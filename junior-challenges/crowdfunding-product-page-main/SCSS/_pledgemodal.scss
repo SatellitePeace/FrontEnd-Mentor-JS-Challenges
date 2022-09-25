@@ -1,0 +1,150 @@
+h5 {
+  font-size: 1.5rem;
+  display: none;
+}
+h5 span,
+h6 span {
+  font-size: 0.9rem;
+  color: var(--Darkgray);
+}
+
+h6 {
+  font-size: 1.5rem;
+  display: block;
+}
+
+.modal {
+  position: absolute;
+  top: 40rem;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background-color: var(--White);
+  max-width: 375px;
+  width: 100%;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  transition: 0.3s linear;
+  z-index: 2;
+
+  &__close {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__article {
+    margin-bottom: 2rem;
+    border: 2px solid var(--Darkgray);
+    padding: 1rem;
+    border-radius: 0.4rem;
+  }
+  &__mahogany {
+    opacity: 0.2;
+  }
+  &__article--form {
+    display: flex;
+  }
+  &__desc {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    justify-content: center;
+
+    label {
+      font-weight: 600;
+    }
+    strong {
+      margin-left: 1rem;
+      color: var(--Darkcyan);
+    }
+  }
+  &__text {
+    color: var(--Darkgray);
+  }
+  &__pledge--form {
+    text-align: center;
+    border-top: 2px solid var(--Darkgray);
+    visibility: collapse;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    transition: 0.3s linear;
+    input {
+      border: none;
+      width: 6rem;
+      padding: 1rem 0;
+      text-align: center;
+      border-radius: 2rem;
+      margin-right: 1rem;
+      margin-top: 1rem;
+      background: var(--gray);
+      &:focus {
+        outline: none;
+      }
+    }
+    button {
+      background-color: var(--Darkcyan);
+      color: var(--White);
+      padding: 1rem;
+      margin-left: 1rem;
+    }
+  }
+}
+
+.modal.display {
+  transform: translate(-50%, -50%) scale(1);
+}
+.modal__pledge--form.active {
+  width: initial;
+  height: initial;
+  margin-top: 2rem;
+  padding: 0.5rem 0;
+  visibility: visible;
+}
+
+@media screen and (min-width: 768px) {
+  h5 {
+    display: block;
+  }
+  h6 {
+    display: none;
+  }
+  .modal {
+    max-width: 600px;
+    width: 100%;
+    &__close {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__article {
+      margin-bottom: 2rem;
+      border: 2px solid var(--Darkgray);
+      padding: 1rem;
+      border-radius: 0.4rem;
+    }
+    &__article--form {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &__desc {
+      flex-direction: row;
+      gap: 0.1rem;
+    }
+    &__pledge--form {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-align: initial;
+      padding: 0;
+      input {
+        padding: 1rem 0;
+        text-align: center;
+        margin-right: 0.8rem;
+        margin-top: 1rem;
+      }
+      button {
+        padding: 1rem;
+        margin-left: 0.8rem;
+      }
+    }
+  }
+}
