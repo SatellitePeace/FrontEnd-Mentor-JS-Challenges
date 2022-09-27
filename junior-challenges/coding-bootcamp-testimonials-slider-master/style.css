@@ -1,0 +1,174 @@
+/* GOOGLE FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap");
+/* RESET CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --DarkBlue: hsl(240, 38%, 20%);
+  --GrayishBlue: hsl(240, 18%, 77%);
+  --light: hsl(0, 0%, 100%);
+}
+/* Body */
+body {
+  font-family: Inter, sans-serif;
+  background: rgb(242, 227, 229);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 3rem;
+  min-height: 100vh;
+}
+/* MAIN CONTAINER */
+main {
+  max-width: 375px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+/* CURVE AND PURPLE BACKGROUND SVG */
+.background__image--svg {
+  position: absolute;
+  width: 100%;
+  bottom: -1.9rem;
+  left: 0;
+}
+.backgroung__curve--svg {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+/* General section style */
+section {
+  position: absolute;
+  transition: 0.3s linear;
+}
+h1 {
+  font-size: 1.35rem;
+  color: var(--DarkBlue);
+  margin-bottom: 0.3rem;
+}
+h2 {
+  font-size: 1.2rem;
+  color: var(--GrayishBlue);
+}
+/* PREV AND NEXT CONTROL BUTTONS */
+.control__btns {
+  position: absolute;
+  left: 50%;
+  top: -1.5rem;
+  transform: translateX(-50%);
+  height: 3rem;
+  width: 6rem;
+  text-align: center;
+  background: var(--light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2rem;
+  z-index: 20;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3), -4px -4px 5px rgba(0, 0, 0, 0.3);
+}
+.prev__link {
+  margin-right: 1.5rem;
+}
+.next__link {
+  margin-left: 1.5rem;
+}
+/* MAIN IMG */
+.avatar {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 5rem;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3), -4px -4px 5px rgba(0, 0, 0, 0.3);
+}
+/* SECTION CONTENT INFO */
+.content__info {
+  text-align: center;
+  position: relative;
+}
+.content__info p {
+  font-size: 1.3rem;
+  color: var(--DarkBlue);
+  margin-bottom: 1.5rem;
+}
+/* qoutes svg */
+.qoutes {
+  position: absolute;
+  top: -2.5rem;
+  right: 7rem;
+}
+/* john and tanya visibility styles */
+.john {
+  opacity: 0;
+}
+.john.move {
+  opacity: 1;
+}
+.tanya.hide {
+  opacity: 0;
+}
+/* ATTRIBUTION */
+.attribution {
+  font-size: 1rem;
+  text-align: center;
+  position: absolute;
+  top: 41rem;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    margin-bottom: 0;
+  }
+  main {
+    max-width: 700px;
+  }
+  .background__image--svg {
+    position: absolute;
+    width: 65%;
+    bottom: -10rem;
+    left: 40%;
+  }
+  .control__btns {
+    left: 40%;
+    top: 6.8rem;
+    transform: translateX(100%);
+    background: var(--light);
+  }
+  section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .content__info {
+    order: -1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: start;
+    margin-right: -3.4rem;
+  }
+  .avatar {
+    width: 100%;
+  }
+  .qoutes {
+    top: 2.5rem;
+    left: 2rem;
+  }
+  /* ATTRIBUTION */
+  .attribution {
+    top: 35rem;
+  }
+}
