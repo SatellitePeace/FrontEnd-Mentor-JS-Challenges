@@ -1,0 +1,77 @@
+// RESET
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: var(--VaryLightGrays);
+  min-height: 100vh;
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: var(--DarkBlue);
+}
+p {
+  color: var(--DarkGrayishBlue);
+}
+button {
+  cursor: pointer;
+}
+.btn {
+  border: none;
+  background: var(--BrightRed);
+  color: var(--VeryPaleRed);
+  height: 3rem;
+  width: 7rem;
+  border-radius: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+.btn:hover {
+  box-shadow: 0 0 10px var(--BrightRed), 0 0 20px var(--BrightRed),
+    0 0 60px var(--BrightRed);
+}
+nav,
+header,
+.about {
+  margin: 2rem;
+}
+
+.aboutPattern {
+  position: absolute;
+  left: 0;
+  bottom: -90%;
+  z-index: -1;
+  img {
+    object-fit: cover;
+  }
+  //   background-color: green;
+}
+.overlay {
+  position: absolute;
+  height: 100vmax;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: none;
+  z-index: 1;
+}
+
+.overlay.darken {
+  display: block;
+}
+@media screen and (min-width: 900px) {
+  .overlay.darken {
+    display: none;
+  }
+}

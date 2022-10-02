@@ -1,0 +1,91 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    display: none;
+  }
+  &__link {
+    text-decoration: none;
+    color: var(--DarkBlue);
+    font-size: 1rem;
+    font-weight: bold;
+    display: inline-block;
+    transition: 0.25s ease;
+    &:hover {
+      color: var(--DarkGrayishBlue);
+    }
+  }
+  &__btn {
+    display: none;
+  }
+}
+
+// SMALL NAV
+.smallnav {
+  background-color: var(--VeryPaleRed);
+  max-width: 300px;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 0.3s linear;
+  visibility: hidden;
+  z-index: 10;
+  &.show {
+    transform: translate(-50%, -50%) scale(1);
+    visibility: visible;
+  }
+  &__item {
+    list-style: none;
+    text-align: center;
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: var(--DarkBlue);
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+}
+.smallnav__controls {
+  z-index: 30;
+}
+.close__nav {
+  display: none;
+  z-index: 20;
+}
+// background pattern
+.tablet {
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+@media screen and (min-width: 900px) {
+  .smallnav {
+    display: none;
+  }
+  .smallnav__controls {
+    display: none;
+  }
+  .nav__list {
+    display: flex;
+  }
+  .nav__btn {
+    display: inline-block;
+  }
+}

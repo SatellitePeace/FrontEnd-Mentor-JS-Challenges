@@ -1,0 +1,127 @@
+.footer {
+  background-color: var(--VeryDarkBlue);
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 3rem;
+  align-items: center;
+  padding: 3rem;
+
+  &__logo--icons {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  &__contact--icons {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    list-style: none;
+    a {
+      text-decoration: none;
+      color: var(--VaryLightGray);
+      font-size: 2rem;
+      transition: 0.3s ease;
+      &:hover {
+        color: var(--BrightRed);
+      }
+    }
+  }
+  &__contacts {
+    list-style: none;
+    li {
+      &:not(:last-of-type) {
+        margin-bottom: 1rem;
+      }
+    }
+    a {
+      text-decoration: none;
+      color: var(--VaryLightGray);
+      font-size: 1rem;
+      display: inline-block;
+    }
+  }
+
+  &__contact--list {
+    text-align: start;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+  &__form--control {
+    width: 100%;
+  }
+  &__form {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  &__two--btn {
+    width: 4rem;
+    height: 2.2rem;
+  }
+  &__input {
+    height: 2rem;
+    width: 100%;
+    border-radius: 2rem;
+    border: none;
+    padding-left: 1.5rem;
+    &.alert {
+      border: 1px solid var(--BrightRed);
+      &::placeholder {
+        color: var(--BrightRed);
+      }
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  &__form--error {
+    color: var(--BrightRed);
+    display: block;
+    text-align: center;
+    display: none;
+    &.error {
+      display: block;
+    }
+  }
+  &__copy--two {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 3rem;
+
+    &__logo--icons {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      gap: 5rem;
+    }
+
+    &__contact--icons {
+      gap: 1rem;
+      a {
+        font-size: 1.5rem;
+      }
+    }
+    &__contact--list {
+      width: initial;
+      gap: 5rem;
+    }
+    &__copy--one {
+      display: none;
+    }
+    &__copy--two {
+      display: block;
+      margin-top: 5rem;
+    }
+  }
+}
