@@ -1,0 +1,112 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0;
+  &__logo {
+    margin-left: 1rem;
+  }
+  &__group {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    display: none;
+    margin-right: 2rem;
+  }
+  &__link {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 550;
+    color: var(--VeryDarkBlue);
+    transition: 0.3s linear;
+    &:hover {
+      color: var(--SoftRed);
+    }
+  }
+  &__login {
+    color: var(--white);
+    background-color: var(--SoftRed);
+    padding: 1rem;
+    border-radius: 7px;
+    border: 2px solid var(--SoftRed);
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      color: var(--SoftRed);
+      background-color: transparent;
+    }
+  }
+}
+
+// SMALL NAV
+.smallnav {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  padding: 3rem 0;
+  background-color: rgba(37, 43, 70, 0.9);
+  transform: translateX(100%);
+  transition: 0.3s ease-in;
+  z-index: 20;
+  &.display {
+    transform: translateX(0);
+  }
+  &__control {
+    margin-right: 2rem;
+  }
+  &__logo {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 3rem 3rem;
+  }
+  &__group {
+    list-style: none;
+    text-align: center;
+    margin: 0 5rem;
+    li {
+      padding: 1rem 0;
+      &:not(:last-child) {
+        margin-bottom: 0.5rem;
+        border-bottom: 1px solid var(--white);
+      }
+    }
+  }
+  &__link {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.3rem;
+    color: var(--white);
+  }
+  &__login {
+    border: 2px solid var(--white);
+    display: inline-block;
+    width: 100%;
+    padding: 0.5rem 0;
+    border-radius: 7px;
+  }
+  &__icons {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .smallnav {
+    display: none;
+
+    &__control {
+      display: none;
+    }
+  }
+  //   big screen nav
+  .nav {
+    &__group {
+      display: flex;
+    }
+  }
+}

@@ -1,0 +1,102 @@
+.extension {
+  margin: 3rem;
+  &__text {
+    max-width: 475px;
+    width: 100%;
+    margin: 4rem auto;
+    text-align: center;
+    p {
+      margin: 0.7rem 0;
+      font-size: 1.2rem;
+    }
+  }
+  &__figures {
+    text-align: center;
+    display: flex;
+    gap: 1.5rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    article {
+      box-shadow: 10px 10px 10px rgba(83, 104, 223, 0.1),
+        -10px -10px 10px rgba(83, 104, 223, 0.1);
+      border-radius: 7px;
+      max-width: 357px;
+      width: 100%;
+    }
+    h5 {
+      font-size: 1.3rem;
+    }
+    p {
+      margin: 0.7rem 0 2rem;
+      font-size: 1.1rem;
+    }
+    figure {
+      margin: 1rem 0;
+      padding-top: 2rem;
+      article {
+        border-radius: 7px;
+        max-width: initial;
+        width: 100%;
+      }
+    }
+  }
+  &__img {
+    display: block;
+  }
+  &__btns {
+    padding-top: 1rem;
+    padding: 1.5rem;
+    border-top: 3px dotted var(--GrayishBlue);
+  }
+  &__btn {
+    padding: 1rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--white);
+    background-color: var(--SoftBlue);
+    border: 2px solid var(--SoftBlue);
+    &:hover {
+      background: transparent;
+      color: var(--SoftBlue);
+    }
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .extension {
+    &__figures {
+      text-align: center;
+      flex-direction: row;
+    }
+    &__btn {
+      padding: 0.5rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--white);
+      background-color: var(--SoftBlue);
+      border: 2px solid var(--SoftBlue);
+      &:hover {
+        background: transparent;
+        color: var(--SoftBlue);
+      }
+    }
+    &__card--one {
+      margin-top: -4rem;
+    }
+    &__card--three {
+      margin-top: 4rem;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .extension {
+    &__figures {
+      gap: 4rem;
+    }
+    &__btn {
+      padding: 1rem;
+    }
+  }
+}

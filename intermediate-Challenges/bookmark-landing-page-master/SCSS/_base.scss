@@ -1,0 +1,53 @@
+// GOOGLE FONTS
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;1,600&display=swap");
+
+// reset css
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  font-family: Rubik, sans-serif;
+}
+:root {
+  --SoftBlue: hsl(231, 69%, 60%);
+  --SoftRed: hsl(0, 94%, 66%);
+  --GrayishBlue: hsl(229, 8%, 60%);
+  --VeryDarkBlue: hsl(229, 31%, 21%);
+  --white: #fff;
+}
+h1,
+h2,
+h3,
+h4,
+h6 {
+  color: var(--VeryDarkBlue);
+}
+h2 {
+  font-size: 1.85rem;
+}
+
+p {
+  color: var(--GrayishBlue);
+  line-height: 2rem;
+  font-size: 1.1rem;
+}
+a {
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+button {
+  border: none;
+  border-radius: 7px;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+@media screen and (min-width: 800px) {
+  h2 {
+    font-size: 2rem;
+  }
+}

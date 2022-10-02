@@ -1,0 +1,89 @@
+.faq {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5rem 3rem;
+
+  &__text {
+    text-align: center;
+    max-width: 375px;
+    width: 100%;
+    p {
+      font-size: 1.2rem;
+      margin: 1.5rem 0 0;
+    }
+  }
+  &__section {
+    max-width: 375px;
+    width: 100%;
+    h6 {
+      font-size: 1.2rem;
+    }
+  }
+  &__question {
+    margin-top: 2rem;
+
+    article {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+      padding: 0.7rem;
+      border-bottom: 1px solid var(--GrayishBlue);
+      cursor: pointer;
+      &:hover h6 {
+        color: var(--SoftRed);
+      }
+      figure a {
+        font-size: 1.7rem;
+        color: var(--SoftBlue);
+      }
+    }
+  }
+  &__answer {
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+    font-size: 1.1rem;
+    transition: 0.3s ease-in;
+    &.open {
+      visibility: visible;
+      height: initial;
+    }
+  }
+  &__control {
+    transition: 0.3s ease-in;
+    &.active {
+      transform: rotate(180deg);
+      a {
+        color: var(--SoftRed);
+      }
+    }
+  }
+  &__btn {
+    padding: 1rem;
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    display: block;
+    color: var(--white);
+    border: 2px solid var(--SoftBlue);
+    background-color: var(--SoftBlue);
+    &:hover {
+      background-color: transparent;
+      color: var(--SoftBlue);
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .faq {
+    &__text {
+      max-width: 500px;
+    }
+    &__section {
+      max-width: 500px;
+    }
+  }
+}
