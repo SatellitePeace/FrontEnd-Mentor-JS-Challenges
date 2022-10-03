@@ -1,0 +1,124 @@
+.url {
+  margin: 6rem 4rem;
+  &__form--control {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  &__input {
+    height: 2.7rem;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    padding-left: 2rem;
+    font-size: 1.1rem;
+    color: var(--DarkViolet);
+    &:focus {
+      outline: none;
+    }
+    &.error {
+      border: 2px solid var(--Red);
+      &::placeholder {
+        color: var(--Red);
+      }
+    }
+  }
+  &__error--msg {
+    color: var(--Red);
+    display: none;
+    &.alert {
+      display: block;
+    }
+  }
+  &__btn {
+    border-radius: 5px;
+    width: 100%;
+  }
+  &__shorten {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    background-color: var(--white);
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 7px;
+  }
+  &__original {
+    overflow-x: auto;
+  }
+  &__text {
+    font-size: 1.2rem;
+    color: var(--DarkViolet);
+    font-weight: 600;
+    margin: 1rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--DarkViolet);
+  }
+
+  &__after--text {
+    color: var(--Cyan);
+    font-size: 1.2rem;
+    margin-bottom: 0.7rem;
+    font-weight: 600;
+  }
+  &__clipboard {
+    border-radius: 5px;
+    width: 100%;
+  }
+  &__delete {
+    color: var(--Red);
+    font-size: 1.4rem;
+    display: block;
+    text-align: center;
+    margin-top: 0.7rem;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .url {
+    margin: 4rem auto;
+    max-width: 700px;
+    &__form--control {
+      max-width: 700px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 575px 1fr;
+      justify-content: space-between;
+    }
+    &__input {
+      display: block;
+      width: 100%;
+    }
+
+    &__btn {
+      border-radius: 5px;
+      width: 6.5rem;
+    }
+    &__shorten {
+      flex-direction: row;
+      gap: 2rem;
+      align-items: center;
+    }
+    &__original {
+      max-width: 375px;
+      width: 100%;
+    }
+    &__after {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    &__text {
+      font-size: 1.1rem;
+      margin: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+    &__after--text {
+      font-size: 1.1rem;
+    }
+    &__clipboard {
+      width: 5rem;
+    }
+  }
+}

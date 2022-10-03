@@ -1,85 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+    <!-- bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <!-- SCSS CSS -->
+    <link rel="stylesheet" href="/dist/csss/main.css">
+    <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+  </head>
 
-  Features
-  Pricing
-  Resources
+  <body>
+    <nav class="nav">
+      <div class="nav__logo">
+        <figure>
+          <img src="/images/logo.svg" alt="logo">
+        </figure>
+        <ul class="nav__group">
+          <li><a href="#" class="nav__link">Features</a></li>
+          <li><a href="#" class="nav__link">Pricing</a></li>
+          <li><a href="#" class="nav__link">Resources</a></li>
+        </ul>
+      </div>
+      <!-- login -->
+      <div>
+        <ul class="nav__group">
+          <li><a href="#" class="nav__link">Pricing</a></li>
+          <li><a href="#" class="nav__link nav__signup">SignUp</a></li>
 
-  Login
-  Sign Up
+        </ul>
+        <!-- Small Nav -->
+        <button class="smallnav__control">
+          <i class="bi bi-list"></i>
+        </button>
+      </div>
 
-  More than just shorter links
+      <!-- small nav group -->
+      <div class="smallnav">
+        <ul class="smallnav__group">
+          <li><a href="#" class="smallnav__link">Features</a></li>
+          <li><a href="#" class="smallnav__link">Pricing</a></li>
+          <li><a href="#" class="smallnav__link">Resources</a></li>
+        </ul>
+        <!-- smallnav login -->
+        <ul class="smallnav__group--two">
+          <li><a href="#" class="smallnav__link">Login</a></li>
+          <li><a href="#" class="smallnav__link smallnav__signup">SignUp</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- HEADER -->
+    <header class="header">
+      <article class="header__text">
+        <h1>
+          More than just shorter links
+        </h1>
+        <p>
+          Build your brand’s recognition and get detailed insights
+          on how your links are performing.
+        </p>
+        <button class="header__btn">
+          Get Started
+        </button>
+      </article>
+      <figure class="header__figure">
+        <img src="/images/illustration-working.svg" alt="
+         header image of woman working" class="header__img">
+      </figure>
+    </header>
+    <main>
+      <section class="url">
+        <form id="form">
+          <div class="url__form--control">
+            <div class="url__error">
+              <input type="text" class="url__input" placeholder="Shorten a link here...">
+              <small class="url__error--msg">
+                Please add a link
+              </small>
+            </div>
+            <button class="url__btn">
+              Shorten It!
+            </button>
+          </div>
+        </form>
+        <!-- todo links -->
+        <div class="url__list">
+          <!-- <article class="url__shorten">
+            <div class="url__original">
+              <p class="url__text">
+                https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G
+              </p>
+            </div>
+            <!-- shorter -->
+          <!-- <div class="url__after">
+              <p class="url__after--text">
+                web.whatsapp.com
+              </p>
+              <button class="url__clipboard">
+                Copy
+              </button>
+              <a href="#" class="url__delete">
+                <i class="bi bi-trash3"></i></a>
+            </div>
+          </article> -->
+        </div>
+      </section>
+    </main>
 
-  Build your brand’s recognition and get detailed insights 
-  on how your links are performing.
+    Advanced Statistics
 
-  Get Started
-  
-  Shorten a link here...
+    Track how your links are performing across the web with our
+    advanced statistics dashboard.
 
-  Shorten It!
+    Brand Recognition
 
-  Advanced Statistics
+    Boost your brand recognition with each click. Generic links don’t
+    mean a thing. Branded links help instil confidence in your content.
 
-  Track how your links are performing across the web with our 
-  advanced statistics dashboard.
+    Detailed Records
 
-  Brand Recognition
+    Gain insights into who is clicking your links. Knowing when and where
+    people engage with your content helps inform better decisions.
 
-  Boost your brand recognition with each click. Generic links don’t 
-  mean a thing. Branded links help instil confidence in your content.
+    Fully Customizable
 
-  Detailed Records
+    Improve brand awareness and content discoverability through customizable
+    links, supercharging audience engagement.
 
-  Gain insights into who is clicking your links. Knowing when and where 
-  people engage with your content helps inform better decisions.
+    Boost your links today
 
-  Fully Customizable
+    Get Started
 
-  Improve brand awareness and content discoverability through customizable 
-  links, supercharging audience engagement.
+    Features
 
-  Boost your links today
+    Link Shortening
+    Branded Links
+    Analytics
 
-  Get Started
+    Resources
 
-  Features
+    Blog
+    Developers
+    Support
 
-  Link Shortening
-  Branded Links
-  Analytics
+    Company
 
-  Resources
+    About
+    Our Team
+    Careers
+    Contact
 
-  Blog
-  Developers
-  Support
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+    <!-- JS -->
+    <script src="/app.js"></script>
+  </body>
 
-  Company
-
-  About
-  Our Team
-  Careers
-  Contact
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
 </html>

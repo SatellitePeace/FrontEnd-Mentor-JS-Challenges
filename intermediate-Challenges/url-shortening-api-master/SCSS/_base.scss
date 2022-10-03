@@ -1,0 +1,55 @@
+// RESET CSS
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Cyan: hsl(180, 66%, 49%);
+  --DarkViolet: hsl(257, 27%, 26%);
+  --Red: hsl(0, 87%, 67%);
+  --Gray: hsl(0, 0%, 75%);
+  --GrayishViolet: hsl(257, 7%, 63%);
+  --VeryDarkBlue: hsl(255, 11%, 22%);
+  --VeryDarkViolet: hsl(260, 8%, 14%);
+  --white: #fff;
+}
+
+body {
+  background-color: pink;
+}
+h1,
+h2,
+h3 {
+  color: var(--VeryDarkViolet);
+}
+p {
+  color: var(--GrayishViolet);
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+button {
+  border: none;
+  border-radius: 2rem;
+  font-weight: 600;
+  color: var(--white);
+  display: inline-block;
+  cursor: pointer;
+  height: 2.7rem;
+  font-size: 1.05rem;
+  background-color: var(--Cyan);
+  width: 8rem;
+  transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+// @media (hover: hover) {
+//   a {
+//     background: coral;
+//   }
+// }
