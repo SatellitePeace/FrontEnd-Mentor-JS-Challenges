@@ -1,5 +1,5 @@
 .header {
-  margin: 4rem 2rem 2rem;
+  margin: 4rem 2rem 10rem;
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
@@ -27,7 +27,7 @@
 
 @media screen and (min-width: 800px) {
   .header {
-    margin: 4rem 0 2rem 3rem;
+    margin: 4rem 0 10rem 3rem;
     flex-direction: row;
     justify-content: space-between;
     &__text {
@@ -44,6 +44,19 @@
     &__img {
       width: 100%;
       display: block;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .header {
+    &__text {
+      h1 {
+        font-size: 3.5rem;
+      }
+      p {
+        font-size: 1.45rem;
+      }
     }
   }
 }

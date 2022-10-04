@@ -17,8 +17,10 @@
 }
 
 body {
-  background-color: pink;
+  font-family: sans-serif;
+  overflow-x: hidden;
 }
+
 h1,
 h2,
 h3 {
@@ -26,6 +28,7 @@ h3 {
 }
 p {
   color: var(--GrayishViolet);
+  line-height: 1.7rem;
 }
 ul {
   list-style: none;
@@ -33,6 +36,7 @@ ul {
 a {
   text-decoration: none;
   display: inline-block;
+  transition: all 0.3s linear;
 }
 button {
   border: none;
@@ -46,10 +50,7 @@ button {
   background-color: var(--Cyan);
   width: 8rem;
   transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  &:hover {
+    transform: scale(1.05);
+  }
 }
-
-// @media (hover: hover) {
-//   a {
-//     background: coral;
-//   }
-// }
