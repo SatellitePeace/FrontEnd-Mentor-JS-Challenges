@@ -1,0 +1,84 @@
+/* GOOGLR FONTS */
+
+/* RESET CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* ROOT */
+:root {
+  --Orange: hsl(26, 100%, 55%);
+  --Paleorange: hsl(25, 100%, 94%);
+  --VeryvDarkblue: hsl(220, 13%, 13%);
+  --Darkgrayishblue: hsl(219, 9%, 45%);
+  --Grayishblue: hsl(220, 14%, 75%);
+  --Lightgrayishblue: hsl(223, 64%, 98%);
+  --White: hsl(0, 0%, 100%);
+  /* --Black (with 75% opacity for lightbox background): hsl(0, 0%, 0%) */
+}
+
+/* BODY */
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  background: lightblue;
+  margin: 2rem;
+}
+
+/* GENERAL */
+
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+button {
+  border: none;
+  border-radius: 7px;
+  height: 2.7rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--Orange);
+  color: var(--White);
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+/* NAV */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vmax;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+  &.darken {
+    display: block;
+  }
+}
+/* MAIN */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 800px) {
+  main {
+    max-width: 992px;
+    width: 100%;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+}

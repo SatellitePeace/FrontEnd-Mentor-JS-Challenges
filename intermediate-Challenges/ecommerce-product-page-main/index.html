@@ -1,44 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | E-commerce product page</title>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <!-- SCSS -->
+    <link rel="stylesheet" href="/dist/csss/main.css">
+    <title>Frontend Mentor | E-commerce product page</title>
 
-  Collections
-  Men
-  Women
-  About
-  Contact
+    </style>
+  </head>
 
-  Sneaker Company
+  <body>
 
-  Fall Limited Edition Sneakers
+    <nav>
+      <!-- small nav open -->
+      <figure class="smallnav__open">
+        <a href="#">
+          <img src="/images/icon-menu.svg" alt=" open small menu icon">
+        </a>
+      </figure>
+      <!-- small nav items -->
+      <div class="smallnav">
+        <figure class="smallnav__close">
+          <a href="#">
+            <img src="/images/icon-close.svg" alt="close small nav">
+          </a>
+        </figure>
+        <ul>
+          <li><a href="#" class="smallnav__link">
+              Collections
+            </a></li>
+          <li><a href="#" class="smallnav__link">
+              Men
+            </a></li>
+          <li><a href="#" class="smallnav__link">
+              Women
+            </a></li>
+          <li><a href="#" class="smallnav__link">
+              About
+            </a></li>
+          <li><a href="#" class="smallnav__link">
+              contact
+            </a></li>
+        </ul>
+      </div>
+      <!-- general nav -->
+      <!-- nav logo -->
+      <figure>
+        <img src="/images/logo.svg" alt="website logo">
+      </figure>
+      <ul class="mainnav">
+        <li><a href="#" class="mainnav__link">
+            Collections
+          </a></li>
+        <li><a href="#" class="mainnav__link">
+            Men
+          </a></li>
+        <li><a href="#" class="mainnav__link">
+            Women
+          </a></li>
+        <li><a href="#" class="mainnav__link">
+            About
+          </a></li>
+        <li><a href="#" class="mainnav__link">
+            contact
+          </a></li>
+      </ul>
+      <!--  -->
+      <div class="cart__user">
+        <article class="cart">
+          <figure class="cart__design">
+            <a href="#">
+              <img src="/images/icon-cart.svg" alt="cart">
+            </a>
+            <span class="cart__items">
+              0
+            </span>
+          </figure>
+          <!-- main nav items -->
 
-  These low-profile sneakers are your perfect casual wear companion. Featuring a 
-  durable rubber outer sole, they’ll withstand everything the weather can offer.
+          <!-- main cart -->
+          <div class="cart__products">
+            <div id="emptyCart">
+              <strong class="cart__title">
+                Cart
+              </strong>
+              <p class="empty__cart"> Your Cart Is Empty </p>
+            </div>
+            <div id="addedToCart">
+              <strong class="cart__title">
+                Cart
+              </strong>
+              <article class="cart__products--info">
+                <figure>
+                  <img src="/images/image-product-1-thumbnail.jpg" alt="image one">
+                </figure>
+                <div class="cart__text">
+                  <p>
+                    Fall Limited Edition Sneakers
+                  </p>
+                  <p>
+                    <span>
+                      $125.00
+                    </span> x
+                    <span id="number">3</span>
+                    $<strong id="total">
+                      250.00
+                    </strong>
+                  </p>
+                </div>
+                <a href="#" class="delete"><img src="/images/icon-delete.svg" alt="delete icon"></a>
+              </article>
+              <button class="cart__btn">
+                Checkout
+              </button>
+            </div>
+            <!--  -->
+          </div>
+        </article>
+        <!-- user -->
+        <figure>
+          <img src="/images/image-avatar.png" alt="user photo" class="user">
+        </figure>
+      </div>
+    </nav>
+    <main>
+      <section class="thumb">
+        <!-- main thumbnail img -->
+        <div class="thumb__nail">
+          <figure class="thumb__main">
+            <a href="#" class="thumb__img"><img src="images/image-product-1.jpg" alt="product one"
+                class="thumb__main--img"></a>
+          </figure>
+          <figure class="thumb__arrows">
+            <a href="#" class="thumb__arrow--one">
+              <img src="/images/icon-previous.svg" alt="previous arrow">
+            </a>
+            <a href="#" class="thumb__arrow--two"><img src="/images/icon-next.svg" alt="next arrow"></a>
+          </figure>
+        </div>
+        <!-- sub thumbnail -->
+        <figure class="thumb__subimages">
+          <a href="#" class="thumbnails">
+            <img src="/images/image-product-1-thumbnail.jpg" alt="image-product-1-thumbnail" class="thumb__img">
+          </a>
+          <a href="#" class="thumbnails">
+            <img src="/images/image-product-2-thumbnail.jpg" alt="image-product-2-thumbnail" class="thumb__img">
+          </a>
+          <a href="#" class="thumbnails">
+            <img src="/images/image-product-3-thumbnail.jpg" alt="image-product-3-thumbnail" class="thumb__img">
+          </a>
+          <a href="#" class=" thumbnails">
+            <img src="/images/image-product-4-thumbnail.jpg" alt="image-product-4-thumbnail" class="thumb__img">
+          </a>
+        </figure>
+      </section>
+      <!-- product info -->
+      <section class="products">
+        <article>
+          <p class="products__subheading">
+            Sneaker Company
+          </p>
+          <h1>
+            Fall Limited Edition Sneakers
+          </h1>
+          <p class="products__text">
+            These low-profile sneakers are your perfect casual wear companion. Featuring a
+            durable rubber outer sole, they’ll withstand everything the weather can offer.
+          </p>
+          <div class="products__price">
+            <article class="products__current--price">
+              <h2>$<span id="price">125.00</span>
+              </h2>
+              <p class="products__discount">
+                50%
+              </p>
+            </article>
 
-  $125.00
-  50%
-  $250.00
+            <p class="products__former--price">
+              $250.00
+            </p>
 
-  0
-  Add to cart
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+          </div>
+        </article>
+        <div class="products__controls">
+          <article class="products__cart">
+            <button id="removeProducts">
+              -
+            </button>
+            <h3 id="productsNum">
+              0
+            </h3>
+            <button id="addProducts">
+              +
+            </button>
+          </article>
+          <button class="products__btn">
+            <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+                fill="#fff" fill-rule="nonzero" />
+            </svg>
+            Add to Cart
+          </button>
+        </div>
+      </section>
+    </main>
+    <div class="overlay"></div>
+    <footer class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </footer>
+    <!-- JS -->
+    <script src="/app.js"></script>
+  </body>
+
 </html>
