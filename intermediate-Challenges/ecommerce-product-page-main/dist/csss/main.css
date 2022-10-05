@@ -1,4 +1,5 @@
 /* GOOGLR FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;600;700&display=swap");
 /* RESET CSS */
 * {
   margin: 0;
@@ -20,7 +21,7 @@
 
 /* BODY */
 body {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: Kumbh Sans;
   background: lightblue;
   margin: 2rem;
 }
