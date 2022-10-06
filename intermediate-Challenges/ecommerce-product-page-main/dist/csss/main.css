@@ -61,12 +61,6 @@ button {
     gap: 4rem;
   }
 }
-.cart__user {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-}
-
 .cart {
   display: flex;
 }
@@ -91,15 +85,23 @@ button {
   border-radius: 50%;
 }
 
+.cart__user {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+}
+
 .cart__products {
   background-color: var(--White);
   padding: 2rem;
   border-radius: 7px;
-  max-width: 375px;
-  width: 100%;
+  min-width: 300px;
+  width: 350px;
   position: absolute;
-  top: 20%;
-  right: 3rem;
+  top: 100%;
+  right: -12px;
+  margin: 0 auto;
   transform: translateY(-200%);
   transition: 0.3s linear;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3), -10px -10px 10px rgba(0, 0, 0, 0.3);
