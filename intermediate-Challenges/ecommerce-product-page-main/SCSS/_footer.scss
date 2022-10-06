@@ -2,7 +2,38 @@
   font-size: 1rem;
   margin: 1rem auto;
   color: var(--Orange);
+  text-align: center;
   a {
     color: var(--VeryvDarkblue);
+  }
+}
+
+// overlay
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  height: 227%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+  &.darken {
+    display: block;
+  }
+}
+@media screen and (min-width: 800px) {
+  .shadow {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    height: 150%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    &.bright {
+      display: block;
+    }
   }
 }

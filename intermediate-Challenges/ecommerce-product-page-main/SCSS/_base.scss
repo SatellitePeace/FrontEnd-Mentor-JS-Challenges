@@ -15,13 +15,12 @@
   --Grayishblue: hsl(220, 14%, 75%);
   --Lightgrayishblue: hsl(223, 64%, 98%);
   --White: hsl(0, 0%, 100%);
-  /* --Black (with 75% opacity for lightbox background): hsl(0, 0%, 0%) */
 }
 
 /* BODY */
 body {
   font-family: Kumbh Sans;
-  background: lightblue;
+  background: #eee;
   margin: 2rem;
 }
 
@@ -48,28 +47,8 @@ button {
   cursor: pointer;
   transition: all 0.3s ease-in;
 }
-/* NAV */
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100vmax;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  display: none;
-  &.darken {
-    display: block;
-  }
-}
-/* MAIN */
 
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-.attribution a {
-  color: hsl(228, 45%, 44%);
-}
+/* MAIN */
 
 @media screen and (min-width: 800px) {
   main {

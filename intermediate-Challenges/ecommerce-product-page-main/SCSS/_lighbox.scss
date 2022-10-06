@@ -1,22 +1,48 @@
-.thumb {
+.lightbox {
+  position: absolute;
+  top: 0;
+  left: 2rem;
+  right: 2rem;
+  height: 100%;
+  visibility: hidden;
+  display: none;
+  z-index: 1000;
+  &.light {
+    display: block;
+  }
+
+  &__nail {
+    position: relative;
+  }
+  &__close {
+    display: block;
+    text-align: center;
+    margin: 2.5rem;
+    a {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--White);
+      &:hover {
+        color: var(--Orange);
+      }
+    }
+  }
   &__main--img {
     border-radius: 1rem;
-    position: relative;
     margin: 0 auto;
-    max-width: 576px;
+    max-width: 475px;
     width: 100%;
     display: block;
-    transition: 0.3s linear;
+    position: relative;
   }
-  &__arrows {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  &__img {
+    width: 100%;
   }
+
   &__arrow--one,
   &__arrow--two {
     position: absolute;
-    top: 20rem;
+    top: 15rem;
     transform: translateY(-50%);
     background-color: var(--White);
     padding: 0.75rem;
@@ -25,10 +51,10 @@
     border-radius: 50%;
   }
   &__arrow--one {
-    left: 1rem;
+    left: 6rem;
   }
   &__arrow--two {
-    right: 1rem;
+    right: 6rem;
   }
   &__subimages {
     margin-top: 2rem;
@@ -39,18 +65,20 @@
 
     a img {
       border-radius: 7px;
-      border: 2px solid var(--Orange);
+      border: 1px solid var(--Orange);
       width: 3rem;
       object-fit: cover;
+
+      //   gap: 1rem;
     }
   }
 }
 
-.thumbnails {
+.lightboxes {
   position: relative;
 }
 @media screen and (min-width: 500px) {
-  .thumb {
+  .lightbox {
     &__subimages {
       a img {
         width: 5rem;
@@ -59,7 +87,7 @@
   }
 }
 @media screen and (min-width: 610px) {
-  .thumb {
+  .lightbox {
     &__subimages {
       a img {
         width: 7rem;
@@ -68,18 +96,14 @@
   }
 }
 @media screen and (min-width: 800px) {
-  .thumb {
+  .lightbox {
+    visibility: visible;
     &__main {
       position: relative;
     }
     &__main--img {
       margin: 0 auto;
-      max-width: 576px;
-      width: 100%;
       display: block;
-    }
-    &__arrows {
-      display: none;
     }
 
     &__subimages {
