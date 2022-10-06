@@ -30,4 +30,6 @@ Users should be able to:
 - Mobile-first workflow
 - Vanilla Javascript
 
+### AUTHOR
+
 - Frontend Mentor - [Nneoma Peace](https://www.frontendmentor.io/profile/SatellitePeace)
