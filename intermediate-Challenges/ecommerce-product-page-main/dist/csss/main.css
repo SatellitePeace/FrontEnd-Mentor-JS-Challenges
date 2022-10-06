@@ -16,13 +16,12 @@
   --Grayishblue: hsl(220, 14%, 75%);
   --Lightgrayishblue: hsl(223, 64%, 98%);
   --White: hsl(0, 0%, 100%);
-  /* --Black (with 75% opacity for lightbox background): hsl(0, 0%, 0%) */
 }
 
 /* BODY */
 body {
   font-family: Kumbh Sans;
-  background: lightblue;
+  background: #eee;
   margin: 2rem;
 }
 
@@ -51,30 +50,7 @@ button {
   transition: all 0.3s ease-in;
 }
 
-/* NAV */
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100vmax;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  display: none;
-}
-.overlay.darken {
-  display: block;
-}
-
 /* MAIN */
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-
-.attribution a {
-  color: hsl(228deg, 45%, 44%);
-}
-
 @media screen and (min-width: 800px) {
   main {
     max-width: 992px;
@@ -108,6 +84,7 @@ button {
   left: 0.4rem;
   font-size: 1.2rem;
   background-color: var(--Orange);
+  color: var(--White);
   width: 1.5rem;
   height: 1.5rem;
   text-align: center;
@@ -120,7 +97,7 @@ button {
   border-radius: 7px;
   max-width: 375px;
   width: 100%;
-  position: fixed;
+  position: absolute;
   top: 20%;
   right: 3rem;
   transform: translateY(-200%);
@@ -143,6 +120,7 @@ button {
   display: flex;
   gap: 1.5rem;
   align-items: center;
+  justify-content: center;
   font-size: 1.2rem;
   margin-top: 1.5rem;
 }
@@ -170,6 +148,9 @@ button {
   width: 100%;
   margin-top: 2rem;
 }
+.cart__btn:hover {
+  opacity: 0.8;
+}
 
 .user {
   width: 3rem;
@@ -192,11 +173,148 @@ button {
   font-size: 1rem;
   margin: 1rem auto;
   color: var(--Orange);
+  text-align: center;
 }
 .attribution a {
   color: var(--VeryvDarkblue);
 }
 
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  height: 227%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+}
+.overlay.darken {
+  display: block;
+}
+
+@media screen and (min-width: 800px) {
+  .shadow {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    height: 150%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+  }
+  .shadow.bright {
+    display: block;
+  }
+}
+.lightbox {
+  position: absolute;
+  top: 0;
+  left: 2rem;
+  right: 2rem;
+  height: 100%;
+  visibility: hidden;
+  display: none;
+  z-index: 1000;
+}
+.lightbox.light {
+  display: block;
+}
+.lightbox__nail {
+  position: relative;
+}
+.lightbox__close {
+  display: block;
+  text-align: center;
+  margin: 2.5rem;
+}
+.lightbox__close a {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--White);
+}
+.lightbox__close a:hover {
+  color: var(--Orange);
+}
+.lightbox__main--img {
+  border-radius: 1rem;
+  margin: 0 auto;
+  max-width: 475px;
+  width: 100%;
+  display: block;
+  position: relative;
+}
+.lightbox__img {
+  width: 100%;
+}
+.lightbox__arrow--one, .lightbox__arrow--two {
+  position: absolute;
+  top: 15rem;
+  transform: translateY(-50%);
+  background-color: var(--White);
+  padding: 0.75rem;
+  display: block;
+  text-align: center;
+  border-radius: 50%;
+}
+.lightbox__arrow--one {
+  left: 6rem;
+}
+.lightbox__arrow--two {
+  right: 6rem;
+}
+.lightbox__subimages {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  justify-content: center;
+}
+.lightbox__subimages a img {
+  border-radius: 7px;
+  border: 1px solid var(--Orange);
+  width: 3rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.lightboxes {
+  position: relative;
+}
+
+@media screen and (min-width: 500px) {
+  .lightbox__subimages a img {
+    width: 5rem;
+  }
+}
+@media screen and (min-width: 610px) {
+  .lightbox__subimages a img {
+    width: 7rem;
+  }
+}
+@media screen and (min-width: 800px) {
+  .lightbox {
+    visibility: visible;
+  }
+  .lightbox__main {
+    position: relative;
+  }
+  .lightbox__main--img {
+    margin: 0 auto;
+    display: block;
+  }
+  .lightbox__subimages {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+  }
+  .lightbox__subimages a img {
+    width: 5rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
 nav {
   display: flex;
   align-items: center;
@@ -287,7 +405,7 @@ h1 {
 }
 .products__text {
   font-size: 1.05rem;
-  color: var(--Grayishblue);
+  color: var(--Darkgrayishblue);
   margin: 1rem 0;
   line-height: 1.7rem;
 }
@@ -298,7 +416,7 @@ h1 {
 }
 .products__former--price {
   text-decoration: line-through;
-  color: var(--Grayishblue);
+  color: var(--Darkgrayishblue);
   font-size: 1.1rem;
 }
 .products__current--price {
@@ -339,10 +457,13 @@ h1 {
   background: var(--Lightgrayishblue);
   display: grid;
   place-items: center;
-  color: var(--Grayishblue);
+  color: var(--Darkgrayishblue);
 }
 .products__btn {
   width: 100%;
+}
+.products__btn:hover {
+  opacity: 0.8;
 }
 
 @media screen and (min-width: 800px) {
@@ -363,15 +484,14 @@ h1 {
     grid-template-columns: 1fr 1fr;
   }
 }
-.thumb__main {
-  position: relative;
-}
 .thumb__main--img {
   border-radius: 1rem;
+  position: relative;
   margin: 0 auto;
   max-width: 576px;
   width: 100%;
   display: block;
+  transition: 0.3s linear;
 }
 .thumb__arrows {
   display: flex;
@@ -380,7 +500,8 @@ h1 {
 }
 .thumb__arrow--one, .thumb__arrow--two {
   position: absolute;
-  top: 60%;
+  top: 20rem;
+  transform: translateY(-50%);
   background-color: var(--White);
   padding: 0.75rem;
   display: block;
@@ -402,7 +523,7 @@ h1 {
 }
 .thumb__subimages a img {
   border-radius: 7px;
-  border: 1px solid var(--Orange);
+  border: 2px solid var(--Orange);
   width: 3rem;
   -o-object-fit: cover;
      object-fit: cover;
