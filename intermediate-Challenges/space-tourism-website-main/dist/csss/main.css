@@ -231,6 +231,10 @@ section {
 .destination__img {
   margin-top: 2rem;
   width: 80%;
+  -webkit-animation: pusle 2s linear infinite;
+          animation: pusle 2s linear infinite;
+  -webkit-animation: pulse 2s linear infinite direction both;
+          animation: pulse 2s linear infinite direction both;
 }
 .destination__text {
   max-width: 500px;
@@ -274,6 +278,29 @@ section {
   border-bottom: 2px solid var(--white);
 }
 
+@-webkit-keyframes pusle {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes pusle {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 @media screen and (min-width: 1600px) {
   .destination__img {
     width: 100%;
