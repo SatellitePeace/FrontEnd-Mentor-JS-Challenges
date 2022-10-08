@@ -1,9 +1,11 @@
 .home {
   background-image: url("/starter-code/assets/home/background-home-desktop.jpg");
   display: flex;
+  gap: 3rem;
   justify-content: space-between;
   align-items: flex-end;
-  padding: 0 3rem 6rem;
+  padding: 0 6rem 6rem 6rem;
+
   &__text {
     max-width: 475px;
     width: 100%;
@@ -17,8 +19,8 @@
     }
   }
   &__btn {
-    height: 13rem;
-    width: 13rem;
+    height: 15rem;
+    width: 15rem;
     font-size: 1.7rem;
     border-radius: 50%;
     border: none;
@@ -59,6 +61,26 @@
       }
       h2 {
         font-size: 4rem;
+      }
+    }
+    &__btn {
+      height: 11rem;
+      width: 11rem;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@media screen and (max-width: 412px) {
+  .home {
+    &__text {
+      max-width: 375px;
+      width: 100%;
+      h1 {
+        font-size: 1rem;
+      }
+      h2 {
+        font-size: 3rem;
       }
     }
     &__btn {

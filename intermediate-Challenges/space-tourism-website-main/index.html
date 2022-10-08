@@ -8,26 +8,20 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/starter-code/assets/shared/logo.svg">
     <!-- SCSS -->
     <link rel="stylesheet" href="/dist/csss/main.css">
-    <title>Frontend Mentor | Space tourism website</title>
+    <title>Frontend Mentor | Space Tourism</title>
   </head>
 
   <body>
     <main class="main">
-      <!-- =
-            NAV= -->
+      <!-- =NAV= -->
       <nav class="navbar">
         <figure>
           <img src="/starter-code/assets/shared/logo.svg" alt="logo" class="navbar__logo">
         </figure>
         <!-- smallnav menu -->
         <a href="#" class="menu">
-          <div class="menu__line menu__line--1">
-          </div>
-          <div class="menu__line menu__line--2">
-          </div>
-          <div class="menu__line menu__line--3">
-          </div>
-
+          <img src="/starter-code/assets/shared/icon-hamburger.svg" alt="icon hamburger" class="menu__open">
+          <img src="/starter-code/assets/shared/icon-close.svg" alt="icon close" class="menu__close">
         </a>
         <!-- big nav list -->
         <ul class="navbar__group">
@@ -50,7 +44,6 @@
     =====-->
       <div class="progress__wrapper">
         <div class="progress">
-
           <h5>
             1/4
           </h5>
@@ -119,9 +112,11 @@
         <section class="section__3">
           <div class="section__wrapper crew">
             <article class="crew__text">
-              <h4>
-                <span>02</span> meet the crew
-              </h4>
+              <div class="hideOnSmallScreen">
+                <h4>
+                  <span>02</span> meet the crew
+                </h4>
+              </div>
               <div class="crew__info">
                 <!-- Added dynamically in js using json -->
               </div>
@@ -132,6 +127,11 @@
                 <a href="#" class="crew__nav-btn" id="engineer"></a>
               </div>
             </article>
+            <div class="hideOnBigScreen">
+              <h4>
+                <span>02</span> meet the crew
+              </h4>
+            </div>
             <figure class="crew__figure">
               <!-- Added dynamically in js using json -->
             </figure>
@@ -141,9 +141,11 @@
         <section class="section__4">
           <div class="section__wrapper technology">
             <article class="technology__text">
-              <h4>
-                <span>03</span> space launch 101
-              </h4>
+              <div class="hideOnSmallScreen">
+                <h4>
+                  <span>03</span> space launch 101
+                </h4>
+              </div>
               <div class="technology__details">
                 <div class="technology__nav">
                   <a href="#" id="one" class="
@@ -163,6 +165,11 @@
                 </article>
               </div>
             </article>
+            <div class="hideOnBigScreen">
+              <h4>
+                <span>03</span> space launch 101
+              </h4>
+            </div>
             <!-- imgs -->
             <figure class="technology__figure">
               <!-- Added dynamically in js using json -->

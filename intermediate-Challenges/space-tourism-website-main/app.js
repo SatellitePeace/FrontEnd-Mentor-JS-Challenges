@@ -1,46 +1,4 @@
-// const sections = document.querySelectorAll("section");
-
-// let counter1 = 0;
-// let counter2 = 1;
-// const sectionTwo = document.querySelector(".section__2");
-// window.addEventListener("wheel", (e) => {
-//   const deltaY = e.deltaY > 0;
-//   if (deltaY) {
-//     counter1++;
-//     counter2++;
-//   } else {
-//     counter1--;
-//     counter2--;
-//     console.log(counter1, counter2);
-//   }
-
-//   if (counter1 === 4) {
-//     Array.from(sections).forEach((section) => {
-//       section.style.left = "0";
-//     });
-//     counter1 = 0;
-//     counter2 = 1;
-//     return;
-//   }
-
-//   if (counter1 === -1) {
-//     Array.from(sections).forEach((section) => {
-//       if (section.classList[0] === "section__4") {
-//         return;
-//       }
-//       section.style.left = "-100vw";
-//     });
-//     counter1 = 3;
-//     counter2 = 4;
-//   }
-
-//   document.querySelector(
-//     `.section__${deltaY ? counter1 : counter2}`
-//   ).style.left = `${deltaY ? "-100vw" : "0"}`;
-// });
-
-let counter1 = 0;
-
+// Navbar, progress bar page zIndex
 const sectionTwo = document.querySelector(".section__2");
 const links = document.querySelectorAll(".navbar__link");
 const sections = document.querySelectorAll("section");
@@ -85,16 +43,10 @@ function smallnavToggle() {
     document.querySelector(".navbar").classList.toggle("change");
   });
 }
-// Dynaimcally add content for the destinations page
-const moonBtn = document.getElementById("moon");
-const marsBtn = document.getElementById("mars");
-const europaBtn = document.getElementById("europa");
-const titanBtn = document.getElementById("titan");
-const destinationInfo = document.querySelector(".destination__info");
-const destinationDetails = document.querySelector(".destination__details");
-const mainDestinationImg = document.getElementById("img");
-const destinationImg = document.querySelector(".destination__Img");
 
+// DYNAMICALLY ADD CONTENTS TO ALL PAGES FROM JSON FILES
+
+//IMPORT JSON DATA
 destination();
 
 async function destination() {
@@ -117,13 +69,22 @@ async function destination() {
   displayLaunch(data);
 }
 
-// DYNAMICALLY ADD CONTENTS TO DESTIONATIONS TAB
+// Add Content For Destinations Page
+const moonBtn = document.getElementById("moon");
+const marsBtn = document.getElementById("mars");
+const europaBtn = document.getElementById("europa");
+const titanBtn = document.getElementById("titan");
+const destinationInfo = document.querySelector(".destination__info");
+const destinationDetails = document.querySelector(".destination__details");
+const mainDestinationImg = document.getElementById("img");
+const destinationImg = document.querySelector(".destination__Img");
 
 // moon
 function moon(data) {
   displayMoon(data);
-  moonBtn.addEventListener("click", () => {
+  moonBtn.addEventListener("click", (e) => {
     displayMoon(data);
+    e.preventDefault();
   });
 }
 // remove moon active class
@@ -133,12 +94,11 @@ function removeMoonActive() {
 
 // destination mars
 function mars(data) {
-  marsBtn.addEventListener("click", () => {
+  marsBtn.addEventListener("click", (e) => {
     removeMoonActive();
     const { name, images, description, distance, travel } =
       data.destinations[1];
     mainDestinationImg.innerHTML = `<img src="${images.webp}" alt="mars" class="destination__img">`;
-
     destinationInfo.innerHTML = `<h2>
                 ${name}
                 </h2>
@@ -163,18 +123,18 @@ function mars(data) {
                 </article>
               </div>
             </article>`;
+    e.preventDefault();
   });
 }
 
 // destination europa
 function europa(data) {
-  europaBtn.addEventListener("click", () => {
+  europaBtn.addEventListener("click", (e) => {
     removeMoonActive();
     const { name, images, description, distance, travel } =
       data.destinations[2];
 
     mainDestinationImg.innerHTML = `<img src="${images.webp}" alt="europa" class="destination__img">`;
-
     destinationInfo.innerHTML = `<h2>
                 ${name}
                 </h2>
@@ -199,16 +159,17 @@ function europa(data) {
                 </article>
               </div>
             </article>`;
+    e.preventDefault();
   });
 }
 // destination titan
 function titan(data) {
-  titanBtn.addEventListener("click", () => {
+  titanBtn.addEventListener("click", (e) => {
     removeMoonActive();
     const { name, images, description, distance, travel } =
       data.destinations[3];
-    mainDestinationImg.innerHTML = `<img src="${images.webp}" alt="europa" class="destination__img">`;
 
+    mainDestinationImg.innerHTML = `<img src="${images.webp}" alt="europa" class="destination__img">`;
     destinationInfo.innerHTML = `<h2>
                 ${name}
                 </h2>
@@ -233,13 +194,14 @@ function titan(data) {
                 </article>
               </div>
             </article>`;
+    e.preventDefault();
   });
 }
 // display and event listener for destination moon
 function displayMoon(data) {
   const { name, images, description, distance, travel } = data.destinations[0];
-  mainDestinationImg.innerHTML = `<img src="${images.webp}" alt="moon" class="destination__img">`;
 
+  mainDestinationImg.innerHTML = `<img src="${images.webp}" alt="moon" class="destination__img">`;
   destinationInfo.innerHTML = `<h2>
                 ${name}
                 </h2>
@@ -274,10 +236,12 @@ const specialistBtn = document.getElementById("specialist");
 const pilotBtn = document.getElementById("pilot");
 const engineerBtn = document.getElementById("engineer");
 
+// commander
 function commander(data) {
   displayCommander(data);
-  commanderBtn.addEventListener("click", () => {
+  commanderBtn.addEventListener("click", (e) => {
     displayCommander(data);
+    e.preventDefault();
   });
 }
 // remove crew current class
@@ -285,10 +249,11 @@ function removeCrewCurrent() {
   commanderBtn.classList.remove("current");
 }
 
+// specialist
 function specialist(data) {
   const { name, images, role, bio } = data.crew[1];
 
-  specialistBtn.addEventListener("click", () => {
+  specialistBtn.addEventListener("click", (e) => {
     removeCrewCurrent();
     crewInfo.innerHTML = ` <h3>
                ${role}
@@ -302,12 +267,14 @@ function specialist(data) {
 
     crewFigure.innerHTML = ` <img src="${images.webp}" alt="image of Mark Shuttleworth"
                 class="crew__img">`;
+    e.preventDefault();
   });
 }
+// pilot
 function pilot(data) {
   const { name, images, role, bio } = data.crew[2];
 
-  pilotBtn.addEventListener("click", () => {
+  pilotBtn.addEventListener("click", (e) => {
     removeCrewCurrent();
     crewInfo.innerHTML = ` <h3>
                ${role}
@@ -321,12 +288,14 @@ function pilot(data) {
 
     crewFigure.innerHTML = ` <img src="${images.webp}" alt="image of Victor Glover"
                 class="crew__img">`;
+    e.preventDefault();
   });
 }
+// engineer
 function engineer(data) {
   const { name, images, role, bio } = data.crew[3];
 
-  engineerBtn.addEventListener("click", () => {
+  engineerBtn.addEventListener("click", (e) => {
     removeCrewCurrent();
     crewInfo.innerHTML = ` <h3>
                ${role}
@@ -340,6 +309,7 @@ function engineer(data) {
 
     crewFigure.innerHTML = ` <img src="${images.webp}" alt="image of Anousheh Ansari"
                 class="crew__img">`;
+    e.preventDefault();
   });
 }
 function displayCommander(data) {
@@ -367,10 +337,12 @@ const btnOne = document.getElementById("one");
 const btnTwo = document.getElementById("two");
 const btnThree = document.getElementById("three");
 
+// launch
 function launch(data) {
   displayLaunch(data);
-  btnOne.addEventListener("click", () => {
+  btnOne.addEventListener("click", (e) => {
     displayLaunch(data);
+    e.preventDefault();
   });
 }
 
@@ -379,9 +351,10 @@ function removeTechnologyDisplay() {
   btnOne.classList.remove("display");
 }
 
+// spacesport
 function spaceSport(data) {
   const { name, images, description } = data.technology[1];
-  btnTwo.addEventListener("click", () => {
+  btnTwo.addEventListener("click", (e) => {
     removeTechnologyDisplay();
     techInfo.innerHTML = `
     <h3> the terminlogy
@@ -397,12 +370,14 @@ function spaceSport(data) {
                 <img src="${images.landscape}" alt="Spaceport"
                 class="technology__img technology__landscape">
                 `;
+    e.preventDefault();
   });
 }
 
+// capsule
 function capsule(data) {
   const { name, images, description } = data.technology[2];
-  btnThree.addEventListener("click", () => {
+  btnThree.addEventListener("click", (e) => {
     removeTechnologyDisplay();
     techInfo.innerHTML = `
     <h3> the terminlogy
@@ -418,6 +393,7 @@ function capsule(data) {
                 <img src="${images.landscape}" alt="Space capsule"
                 class="technology__img technology__landscape">
                 `;
+    e.preventDefault();
   });
 }
 function displayLaunch(data) {
