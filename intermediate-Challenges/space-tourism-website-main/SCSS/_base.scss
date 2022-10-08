@@ -1,0 +1,98 @@
+// RESET CSS
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  list-style: none;
+  text-decoration: none;
+}
+// body {
+//   // color: red;
+// }
+:root {
+  --white: #fff;
+
+  --grey: #eee;
+  --clr-dark: hsl(230 35% 7%);
+  --clr-accent: hsl(231 77% 90%);
+}
+
+h2 {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2.7rem;
+  margin: 1rem 0;
+  color: var(--white);
+}
+h3 {
+  color: var(--clr-accent);
+  font-size: 1.5rem;
+}
+h4 {
+  color: var(--white);
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  text-align: start;
+  span {
+    color: var(--clr-accent);
+  }
+}
+p {
+  font-size: 1.1rem;
+  color: var(--clr-accent);
+  line-height: 1.7rem;
+}
+
+.main__wrapper {
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+section {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  transition: left 1.5s;
+}
+.section__1 {
+  z-index: 40;
+}
+.section__2 {
+  z-index: 30;
+}
+.section__3 {
+  z-index: 20;
+}
+.section__4 {
+  z-index: 10;
+}
+.section__wrapper {
+  width: inherit;
+  height: inherit;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 900px) {
+  .main__wrapper {
+    height: 180vh;
+    overflow-x: hidden;
+    position: relative;
+  }
+  section {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    transition: left 1.5s;
+  }
+}
+
+@media screen and (max-width: 620px) {
+}

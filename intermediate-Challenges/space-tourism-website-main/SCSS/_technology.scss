@@ -1,0 +1,121 @@
+.technology {
+  background-image: url("/starter-code/assets/technology/background-technology-desktop.jpg");
+  display: flex;
+  gap: 3rem;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 3rem 4rem;
+  &__text {
+    max-width: 500px;
+    width: 100%;
+    h3 {
+      text-align: center;
+    }
+  }
+  &__details {
+    display: flex;
+  }
+  &__nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    a {
+      display: grid;
+      place-items: center;
+      margin: 2rem;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      font-size: 1.5rem;
+      color: var(--clr-accent);
+      border: 1px solid var(--clr-accent);
+      &:hover,
+      &:focus {
+        background-color: var(--white);
+        color: var(--clr-dark);
+      }
+    }
+  }
+
+  &__info {
+    h3 {
+      margin-top: 3rem;
+      text-transform: uppercase;
+      text-align: start;
+    }
+  }
+
+  &__img {
+    max-width: 25rem;
+    width: 100%;
+  }
+  &__landscape {
+    display: none;
+  }
+}
+
+#one {
+  &.display {
+    background-color: var(--white);
+    color: var(--clr-dark);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .technology {
+    background-image: url("/starter-code/assets/technology/background-technology-tablet.jpg");
+    flex-direction: column-reverse;
+    gap: 0rem;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 7rem 3rem 4rem;
+    &__text {
+      text-align: center;
+      h3 {
+        text-align: center;
+      }
+    }
+    &__details {
+      flex-direction: column;
+    }
+    &__nav {
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    &__potrait {
+      display: none;
+    }
+    &__landscape {
+      max-width: initial;
+      width: 100%;
+      display: block;
+    }
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .technology {
+    background-image: url("/starter-code/assets/technology/background-technology-mobile.jpg");
+    flex-direction: column-reverse;
+    &__text {
+      text-align: center;
+      h3 {
+        text-align: center;
+      }
+    }
+    &__nav {
+      width: 100%;
+
+      a {
+        display: grid;
+        place-items: center;
+        margin: 2.5rem 1.5rem 0;
+        width: 2rem;
+        height: 2rem;
+        font-size: 1rem;
+      }
+    }
+  }
+}

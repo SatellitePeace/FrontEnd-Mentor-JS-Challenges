@@ -1,0 +1,78 @@
+.crew {
+  background-image: url("/starter-code/assets/crew/background-crew-desktop.jpg");
+  display: flex;
+  gap: 3rem;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 3rem 4rem;
+
+  &__text {
+    max-width: 500px;
+    width: 100%;
+  }
+  &__info {
+    h3 {
+      margin-top: 3rem;
+
+      text-transform: uppercase;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    margin-top: 1rem;
+    a {
+      margin-right: 1rem;
+      width: 1.2rem;
+      height: 1.2rem;
+      border: 2px solid var(--clr-accent);
+      border-radius: 50%;
+      &:focus {
+        background-color: var(--white);
+      }
+    }
+  }
+
+  &__img {
+    max-width: 25rem;
+    width: 100%;
+  }
+}
+
+#commander {
+  &.current {
+    background-color: var(--white);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .crew {
+    background-image: url("/starter-code/assets/crew/background-crew-tablet.jpg");
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 5rem;
+
+    &__text {
+      margin-top: 0rem;
+      text-align: center;
+    }
+    &__nav {
+      justify-content: center;
+    }
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .crew {
+    background-image: url("/starter-code/assets/crew/background-crew-mobile.jpg");
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 5rem;
+    &__text {
+      max-width: 375px;
+      width: 100%;
+    }
+  }
+}

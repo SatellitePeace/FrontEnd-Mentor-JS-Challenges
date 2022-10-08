@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/starter-code/assets/shared/logo.svg">
+    <!-- SCSS -->
+    <link rel="stylesheet" href="/dist/csss/main.css">
+    <title>Frontend Mentor | Space tourism website</title>
+  </head>
+
+  <body>
+    <main class="main">
+      <!-- =
+            NAV= -->
+      <nav class="navbar">
+        <figure>
+          <img src="/starter-code/assets/shared/logo.svg" alt="logo" class="navbar__logo">
+        </figure>
+        <!-- smallnav menu -->
+        <a href="#" class="menu">
+          <div class="menu__line menu__line--1">
+          </div>
+          <div class="menu__line menu__line--2">
+          </div>
+          <div class="menu__line menu__line--3">
+          </div>
+
+        </a>
+        <!-- big nav list -->
+        <ul class="navbar__group">
+          <li><a href="#" class="navbar__link">
+              <span>00</span> Home
+            </a></li>
+          <li><a href="#" class="navbar__link">
+              <span>01</span> Destination
+            </a></li>
+          <li><a href="#" class="navbar__link">
+              <span>02</span> Crew
+            </a></li>
+          <li><a href="#" class="navbar__link">
+              <span>03</span> Technology
+            </a></li>
+        </ul>
+      </nav>
+      <!-- ====
+    PROGRESS BAR
+    =====-->
+      <div class="progress__wrapper">
+        <div class="progress">
+
+          <h5>
+            1/4
+          </h5>
+        </div>
+        <div class="circle__wrapper">
+          <div class="circle circle__1">
+          </div>
+          <div class="circle circle__2">
+          </div>
+          <div class="circle circle__3">
+          </div>
+          <div class="circle circle__4">
+          </div>
+        </div>
+      </div>
+      <!-- ====
+            SECTIONS
+            =====-->
+      <div class="main__wrapper">
+        <section class="section__1">
+          <div class="section__wrapper home">
+            <article class="home__text">
+              <h1>
+                So, you want to travel to
+                </>
+                <h2>SPACE</h2>
+                <p>
+                  Let’s face it; if you want to go to space, you might as well genuinely go to
+                  outer space and not hover kind of on the edge of it. Well sit back, and relax
+                  because we’ll give you a truly out of this world experience!
+                </p>
+            </article>
+            <button class="home__btn">
+              EXPLORE
+            </button>
+          </div>
+        </section>
+        <!-- SECTION TWO -->
+        <section class="section__2">
+          <div class="section__wrapper destination">
+            <article class="destination__figure">
+              <h4>
+                <span>01</span> pick your destination
+              </h4>
+              <figure id="img">
+                <!-- Added dynamically in js using json -->
+              </figure>
+            </article>
+            <article class="destination__text">
+              <div class="destination__nav">
+                <a href="#" id="moon" class="active">MOON</a>
+                <a href="#" id="mars">Mars</a>
+                <a href="#" id="europa">europa</a>
+                <a href="#" id="titan">titan</a>
+              </div>
+              <!-- destination name -->
+              <div class="destination__info">
+                <!-- Added dynamically in js using json -->
+              </div>
+              <div class="destination__details">
+                <!-- Added dynamically in js using json -->
+              </div>
+        </section>
+        <!-- SECTION THREE
+           -->
+        <section class="section__3">
+          <div class="section__wrapper crew">
+            <article class="crew__text">
+              <h4>
+                <span>02</span> meet the crew
+              </h4>
+              <div class="crew__info">
+                <!-- Added dynamically in js using json -->
+              </div>
+              <div class="crew__nav">
+                <a href="#" class="crew__nav-btn current" id="commander"></a>
+                <a href="#" class="crew__nav-btn" id="specialist"></a>
+                <a href="#" class="crew__nav-btn" id="pilot"></a>
+                <a href="#" class="crew__nav-btn" id="engineer"></a>
+              </div>
+            </article>
+            <figure class="crew__figure">
+              <!-- Added dynamically in js using json -->
+            </figure>
+          </div>
+        </section>
+        <!-- SECTION FOUR -->
+        <section class="section__4">
+          <div class="section__wrapper technology">
+            <article class="technology__text">
+              <h4>
+                <span>03</span> space launch 101
+              </h4>
+              <div class="technology__details">
+                <div class="technology__nav">
+                  <a href="#" id="one" class="
+                  display">
+                    1
+                  </a>
+                  <a href="#" id="two">
+                    2
+                  </a>
+                  <a href="#" id="three">
+                    3
+                  </a>
+                </div>
+                <!--  -->
+                <article class="technology__info">
+                  <!-- Added dynamically in js using json -->
+                </article>
+              </div>
+            </article>
+            <!-- imgs -->
+            <figure class="technology__figure">
+              <!-- Added dynamically in js using json -->
+            </figure>
+          </div>
+        </section>
+        <!-- ============ -->
+      </div>
+    </main>
+    <!-- JS -->
+    <script src="/app.js"></script>
+  </body>
+
+</html>
