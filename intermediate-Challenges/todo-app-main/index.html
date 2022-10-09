@@ -1,36 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Todo app</title>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/style.css">
+    <title>Frontend Mentor | Todo app</title>
 
-  Todo
+  </head>
 
-  <!-- Add dynamic number --> items left
+  <body>
+    <header>
+      <h1>
+        Todo
+      </h1>
+      <div class="header__theme">
+        <a href="#" class="toggleThemeIcons">
+          <img src="/images/icon-sun.svg" alt="moon icon" class="lightmode">
+          <img src="/images/icon-moon.svg" alt="sun icon" class="darkmode">
+        </a>
+      </div>
+    </header>
+    <main class="main">
+      <form id="form" class="form">
+        <div class="form__control">
+          <span class="form__circle">
 
-  All
-  Active 
-  Completed
+          </span>
+          <input type="text" class="input" placeholder="Create a new todo">
+        </div>
+      </form>
+      <!-- todo list -->
+      <div class="todos">
+        <ul class="todo__group">
+          <!--
+          <li class="todo__list">
+            <input type="checkbox" class="checkbox">
+            <p class="todo__text">Lorem ipsum dolor sit amet.</p>
+            <a href="#" class="remove__todo">
+              <img src="/images/icon-cross.svg" alt="delete icon">
+            </a>
+          </li>
 
-  Clear Completed
+      
+          <li class="todo__list">
+            <input type="checkbox" class="checkbox">
+            <p class="todo__text">Lorem ipsum dolor sit amet, consectetur</p>
+            <a href="#" class="remove__todo">
+              <img src="/images/icon-cross.svg" alt="delete icon">
+            </a>
+          </li>
 
-  Drag and drop to reorder list
+          
+          <li class="todo__list">
+            <input type="checkbox" class="checkbox">
+            <p class="todo__text">
+              Clear Completed Drag and drop to reorder list
+            </p>
+            <a href="#" class="remove__todo">
+              <img src="/images/icon-cross.svg" alt="delete icon">
+            </a>
+          </li>
+          
+        -->
+        </ul>
+        <!-- end of list items -->
+        <div class="todos__footer">
+          <p class="todos__left">
+            <span id="dynamic__num">
+              0
+            </span> items left
+          </p>
+          <div class="todos__status">
+            <a href="#">
+              <p id="all" class="all">All</p>
+              <p id="active">
+                Active
+              </p>
+              <p id="complete">
+                Completed
+              </p>
+            </a>
+          </div>
+          <a href="#" id="clear">
+            Clear Completed
+          </a>
+        </div>
+      </div>
+      <!-- Drag -->
+      <p class="todo__info">
+        Drag and drop to reorder list
+      </p>
+    </main>
+    <footer class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </footer>
+    <!-- JS -->
+    <script src="/app.js"></script>
+  </body>
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
 </html>
