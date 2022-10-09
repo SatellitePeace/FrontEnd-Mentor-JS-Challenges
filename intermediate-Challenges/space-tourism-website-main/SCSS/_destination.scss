@@ -11,8 +11,7 @@
   &__img {
     margin-top: 2rem;
     width: 80%;
-    animation: pusle 2s linear infinite;
-    animation: pulse 2s linear infinite direction both;
+    animation: pusle 2s linear infinite both;
   }
   &__text {
     max-width: 500px;

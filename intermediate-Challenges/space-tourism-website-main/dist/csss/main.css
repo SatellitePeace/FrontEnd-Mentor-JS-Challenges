@@ -231,10 +231,8 @@ section {
 .destination__img {
   margin-top: 2rem;
   width: 80%;
-  -webkit-animation: pusle 2s linear infinite;
-          animation: pusle 2s linear infinite;
-  -webkit-animation: pulse 2s linear infinite direction both;
-          animation: pulse 2s linear infinite direction both;
+  -webkit-animation: pusle 2s linear infinite both;
+          animation: pusle 2s linear infinite both;
 }
 .destination__text {
   max-width: 500px;

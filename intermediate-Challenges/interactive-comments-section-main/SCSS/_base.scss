@@ -1,0 +1,32 @@
+// RESET CSS
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  list-style: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+  --Moderateblue: hsl(238, 40%, 52%);
+  --SoftRed: hsl(358, 79%, 66%);
+  --Lightgrayishblue: hsl(239, 57%, 85%);
+  --Palered: hsl(357, 100%, 86%);
+  --Darkblue: hsl(212, 24%, 26%);
+  --GrayishBlue: hsl(211, 10%, 45%);
+  --Lightgray: hsl(223, 19%, 93%);
+  --Verylightgray: hsl(228, 33%, 97%);
+  --white: hsl(0, 0%, 100%);
+}
+
+// ATTRIBUTION
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
