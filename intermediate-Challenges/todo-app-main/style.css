@@ -70,8 +70,9 @@ a {
   display: none;
 }
 
-/* main {
-} */
+main {
+  margin-bottom: 1rem;
+}
 /* FORM */
 #form {
   background-color: var(--textBg);
@@ -99,7 +100,60 @@ a {
 input::placeholder {
   color: var(--LightGrayishBluehover);
 }
-
+/* ALERT */
+.alert {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 15rem;
+  width: 100%;
+  text-align: center;
+  margin: 2rem auto;
+  background: hsl(280, 87%, 65%);
+  padding: 1.5rem;
+  border-radius: 5px;
+  display: none;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3),
+    -10px -10px 10px rgba(0, 0, 0, 0.3);
+}
+.alert.op {
+  display: block;
+}
+.alertmsg {
+  color: #eee;
+  font-size: 0.9rem;
+  font-weight: 900;
+  line-height: 1.5rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 1rem auto;
+}
+.alert__btns {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.3rem;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+}
+.alert__btns button {
+  display: inline-block;
+  color: #fff;
+  width: 100%;
+  padding: 0.5rem 0.3rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+.alert__confirm {
+  background-color: tomato;
+}
+.cancel__alert {
+  background: var(--BrightBlue);
+}
 /* TODO ITEMS */
 .todos {
   border-radius: 0.3rem;
@@ -116,6 +170,7 @@ input::placeholder {
   background-color: var(--textBg);
   padding: 1rem;
   font-size: 1.1rem;
+  text-transform: capitalize;
   border-bottom: 1px solid var(--DarkGrayishBlue);
 }
 /* Todos footer */
@@ -140,9 +195,23 @@ input::placeholder {
 .todo__text {
   margin-right: auto;
 }
+.todos__left {
+  color: var(--CheckBackground);
+}
+/* checkbox custom styles */
+input[type="checkbox"] {
+  height: 1.5rem;
+  width: 1.5rem;
+  accent-color: hsl(280, 87%, 65%);
+  cursor: pointer;
+}
 
 /* CONTROLS */
-
+#all,
+#active,
+#complete {
+  color: var(--DarkGrayishBlue);
+}
 #all.all {
   color: var(--BrightBlue);
 }
@@ -158,9 +227,27 @@ input::placeholder {
 }
 /* FOOTER */
 .attribution {
-  font-size: 11px;
+  font-size: 1rem;
   text-align: center;
+  margin-top: 1rem;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 499px) {
+  .todos__footer {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .dark {
+    background-image: url("/images/bg-mobile-dark.jpg");
+  }
+  body {
+    background-color: var(--primary);
+    background-image: url("/images/bg-mobile-light.jpg");
+  }
 }
